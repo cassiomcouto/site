@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body>
+<div id="Container">
+	%%Panel.Header%%
+   
+	<div id="Wrapper">
+		%%Panel.WrapperBanner%%
+        %%Banner.TopBanner%%
+		<div class="Left" id="LayoutColumn1">
+			%%Panel.SideCategoryList%%
+			%%Panel.SidePopularVendors%%
+			%%Panel.SideShopByBrand%%
+			%%Panel.SideNewsletterBox%%
+            %%GLOBAL_PDF%%
+            
+            %%Banner.Esquerdo%%
+            %%Panel.Enquete%%
+            
+		</div>
+        <div class="Right" id="LayoutColumn3">
+			%%Panel.SideLiveChatServices%%
+            %%Panel.SideCartContents%%
+            %%Panel.Facebook%%
+            %%Banner.Direito%%
+			
+		</div>
+		<div class="Content" id="LayoutColumn2">
+			
+            <div id="divTC" class="divTabControl">
+            <div class="divTabs">
+            <ul class="ulTabs">
+                            <li id='li2'  >
+                                <span id="cfForm:L7:0:L7L2">%%LNG_FeaturedProducts%%</span>
+                            </li>
+                            <li id='li3'  >
+                                <span id="cfForm:L7:1:L7L2">Mais Populares</span>
+                            </li>
+                            <li id='li4'  >
+                                <span id="cfForm:L7:2:L7L2">Mais Vendidos</span>
+                            </li>
+			</ul>
+            </div>
+			
+                <div class="divTabArea" id='div2'>
+                    <ul class="ProdutosListagem">
+                   		%%Panel.HomeFeaturedProducts%%
+                    </ul>
+                </div>
+                <div class="divTabArea" id='div3'>
+                  <ul class="ProdutosListagem">
+                   		%%Panel.SidePopularProducts%%
+                  </ul>
+                </div>
+                <div class="divTabArea" id='div4'>
+                     <ul class="MaisvendidosABAHOME">
+                      	%%Panel.SideTopSellers%%
+                    </ul>
+                </div>
+        </div>
+        <script type="text/javascript">tabControl(document.getElementById('divTC'));</script>                            
+
+    
+    
+    
+            <hr />
+			%%Panel.HomeNewProducts%%
+			%%Panel.HomeRecentBlogs%%
+			%%Banner.BottomBanner%%
+		</div>
+		
+		<br class="Clear" />
+	</div>
+	%%Panel.Footer%%
+</div>
+</body>
+</html>

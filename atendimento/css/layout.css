@@ -1,0 +1,275 @@
+* { margin: 0; padding: 0; }
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	}
+body { behavior:url("css/csshover.htc"); }	/* IE behaviour to enable :hover styles */
+
+/* Layout blocks
+---------------------------------- */
+#main {
+	position: relative;
+	padding: 5px 5px 0 5px;
+	width: 450px;
+	height: 354px;
+	overflow: visible;
+	/* Tantek hack */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 440px;
+	}
+html>body #main { width: 440px; }	/* Reset for opera */
+
+#logo {
+	height: 61px;
+	max-width: 440px;
+	overflow: hidden;
+	margin:0px auto;
+	}
+
+#close {
+	position: absolute;
+	right: 5px;
+	top: 1px;
+	font-weight: bold;
+	}
+#deptlist {
+	height: 100px;
+	overflow: auto;
+	padding-right: 5px;
+	margin-bottom: 2px;
+	}
+#chat {
+	width: 432px;
+	padding: 3px;
+	margin-bottom: 5px;
+	}
+html>body #send { vertical-align: top; }
+
+
+/* Form styles
+---------------------------------- */
+fieldset { 
+	border: none;
+	background-color: transparent;
+	padding-bottom: 10px;
+	}
+fieldset dl { margin-bottom: 0px;}
+fieldset dt { float: left; width: 100px; text-align: left; padding-top: 3px; }
+fieldset dd { margin-left: 101px; font-size: 12px; vertical-align: top;}
+fieldset dd span { margin-left: 20px; font-size: 11px; }
+* html fieldset dd span { margin-left: 25px; }
+label {
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 12px;
+	}
+
+dd.textbox input {
+	vertical-align: middle;
+	margin-right: 0.5em;
+	font-size: 12px;
+	padding: 1px 2px;
+	width: 265px;
+	margin: 1px 0 2px 0;
+	}
+* html dd.textbox input { padding: 0 2px; margin: 0 0 3px 0; } /* IE tweak */
+
+dd.online, dd.offline {
+	padding: 3px;
+	margin-bottom: 5px;
+	}
+
+dd select { 
+	width: 72px;
+	font-size: 10px;
+	}
+.message1 {
+	width: 374px;
+	height: 34px;
+	padding: 3px;
+	}
+.message2 {
+	width: 263px;
+	height: 40px;
+	padding: 3px;
+	}
+
+
+
+
+#copyright {
+	position: absolute;
+	top: 342px;
+	right: 5px;
+	font-size: 85%;
+	text-align: right;
+	}
+* html #copyright { top: 347px; }
+
+#options {
+	position: absolute;
+	padding: 4px 8px;
+	margin: 0 -5px;
+	left: 0;
+	top: 337px;
+	width: 100%;
+	}
+
+#sound_print {
+	position: absolute;
+	padding: 4px 8px;
+	margin: 0 -5px;
+	left: 0;
+	top: 337px;
+	width: 100%;
+	}
+
+/* Typing status */ 
+#status {
+	margin-top: 1px;
+	margin-bottom: 5px;
+	font-size: 10px;
+	text-align: right;
+	width: 380px;
+	}
+#typing { 
+	float: left;
+	width: auto;
+	}
+
+
+/* Send button rollover
+---------------------------------- */
+#button {
+	width: 102px;
+	height: 50px;		/* Button dimensions */
+	background-position: 0 -51px;	/* Amount to move button to show roll-over state */
+	background-repeat: no-repeat;
+	}
+
+/* Rolloff state */
+#button a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	}
+
+/* Hide <a> text and hide off-state image when rolling over (prevents flicker in IE) */
+#button span { display:none; }
+#button a:hover { background-image: none; }
+
+
+
+/* General layout styles
+---------------------------------- */
+dl { margin-bottom: 8px; }
+
+dd h4 {
+	font-size: 11px;
+	margin-bottom: 6px;
+	}
+* html dd h4 { margin-bottom: 4px; }
+
+dd { margin: 1px 0 3px 0; }
+
+dd a img {
+	margin-right: 5px;
+	vertical-align:middle;
+	}
+
+
+
+
+
+
+
+/* Tabbed menu
+   Based on: http://www.alistapart.com/articles/slidingdoors2/
+----------------------------------------*/
+#tabs {
+	line-height:normal;
+	margin-left: 4px;
+	margin-bottom: -2px;
+	margin-top: 15px;
+	}
+#tabs ul {
+	margin:0;
+	padding: 0;
+	list-style:none;
+	}
+#tabs li {
+	display:inline;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-transform: capitalize;
+	}
+#tabs a {
+	float:left;
+	margin-right: 1px;
+	padding-left: 2px;
+	text-decoration: none;
+	font-size: 100%;
+	position: relative;
+	}
+#tabs a span {
+	float: left;
+	display: block;
+	padding: 4px 5px 4px 4px;
+	white-space: nowrap;
+	}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabs a span {float:none;}
+/* End hack */
+
+#tabs a:hover {	background-position: 0 -28px; }
+#tabs a:hover span { background-position:100% -28px; }
+#tabs li.activetab a, #tabs li.activetab a:hover {
+	background-position: 0 -56px;
+	}
+#tabs li.activetab a span, #tabs li.activetab a:hover span {
+	background-position: 100% -56px;
+	padding-bottom: 5px;
+	}
+
+
+
+
+
+/* Admin styles
+---------------------------------- */
+#operator {
+	padding: 8px 4px 4px 4px;
+	}
+#operator label{
+	font-size: 10px;
+	}
+#operatorpanel {
+	padding: 4px 0;
+	}
+
+
+/* Misc styles
+---------------------------------- */
+div.aux {
+	position: absolute;
+	top: 0;
+	left: 0;
+	}
+
+/* Nice method for clearing floated blocks without having to insert any extra markup
+   From http://www.positioniseverything.net/easyclearing.html */
+.clearfix:after, #tabs:after, .row:after, fieldset dl:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+	}
+
+/* Hide from Mac IE, Windows IE uses this as it doesn't support the :after method above \*/
+* html .clearfix, * html #tabs, * html fieldset dl { height: 1%; }
+/* End hide */

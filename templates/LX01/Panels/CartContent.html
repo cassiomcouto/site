@@ -1,0 +1,179 @@
+<script type="text/javascript">
+lang.InvalidQuantity = "%%LNG_InvalidQuantity%%";
+lang.Calculating = "%%LNG_Calculating%%"
+lang.CalculateShipping = "%%LNG_CalculateShipping%%"
+lang.ChooseShippingMethod = "%%LNG_ChooseShippingMethod%%"
+lang.CartRemoveConfirm = '%%LNG_CartRemoveConfirm%%';
+lang.ConfirmRemoveGiftWrapping = '%%LNG_ConfirmRemoveGiftWrapping%%';
+</script>
+<script src="%%GLOBAL_ShopPath%%/javascript/jquery/plugins/imodal/imodal.js?%%GLOBAL_JSCacheToken%%" type="text/javascript"></script>
+	<div style="display: %%GLOBAL_HideShoppingCartEmptyMessage%%">
+			<p class="InfoMessage">
+				<strong>%%LNG_NoItemsInCart%%</strong>
+			</p>
+			<br /><br />
+		
+	</div><br /><br />
+<div class="Block Moveable Panel" id="CartContent">
+	<div class="BlockContent">
+		<p class="ErrorMessage" style="display: %%GLOBAL_HideCartBadCouponPanel%%">
+			%%GLOBAL_BadCouponMessage%%
+		</p>
+
+		<p class="SuccessMessage" style="display: %%GLOBAL_HideCartCouponAppliedPanel%%">
+			%%LNG_CouponAppliedToCart%%
+		</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+            <a href="%%GLOBAL_ShopPath%%" onclick="%%GLOBAL_OptimizerLinkFunction%%" title="%%LNG_CheckoutButtonTitle%%">
+			
+			%%GLOBAL_CartCheckoutButtonOptimizerScriptTag%%
+				 <img src="%%GLOBAL_TPL_PATH%%/img/botao_continuar_comprando.gif" alt="" />
+			%%GLOBAL_CartCheckoutButtonOptimizerNoScriptTag%%
+
+			</a>
+            </td>
+            <td align="right">
+                <div class="CheckoutButton" style="%%GLOBAL_HideCheckoutButton%%">
+                        <a href="%%GLOBAL_CheckoutLink%%" onclick="%%GLOBAL_OptimizerLinkFunction%%" title="%%LNG_CheckoutButtonTitle%%">
+                        %%GLOBAL_CartCheckoutButtonOptimizerScriptTag%%
+                        <img src="%%GLOBAL_TPL_PATH%%/img/botao_avancar2.gif" alt="" />
+                        %%GLOBAL_CartCheckoutButtonOptimizerNoScriptTag%%
+                        </a>
+				</div>
+            </td>
+          </tr>
+        </table>
+<div style="display: %%GLOBAL_HideShoppingCartGrid%%">
+	  <form enctype="multipart/form-data" onsubmit="return Cart.ValidateQuantityForm(this);" action="compras.php" name="cartForm" id="cartForm" method="post">
+			<input type="hidden" name="action" value="update" />
+			<table class="CartContents Stylize General" cellspacing="0" cellpadding="0">
+				<thead >
+					<tr>
+						<th colspan="2">%%LNG_CartItems%%</th>
+						<th style="text-align: center; white-space: nowrap;">%%LNG_Qty%%</th>
+						<th style="text-align: center; white-space: nowrap;">%%LNG_ItemPrice%%</th>
+						<th style="text-align: right; white-space: nowrap;">%%LNG_ItemTotal%%</th>
+					</tr>
+				</thead>
+				<tbody>
+                	
+					%%SNIPPET_CartItems%%
+                    
+					<tr class="Alert">
+					  <td colspan="5"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+					    <tr>
+					      <td style="width:72%; border:0;"><b>ATEN&Ccedil;&Atilde;O:</b> O prazo de entrega come&ccedil;a a contar a partir da confirma&ccedil;&atilde;o do pagamento.</td>
+					      <td class="CartItemIndividualPrice" style="border:0">Subtotal</td>
+					      <td align="right" class="CartItemTotalPrice" style="border:0"><em class="ProductPrice">%%GLOBAL_CartItemTotal%%</em></td>
+				        </tr>
+					    </table>
+				      </td>
+			  </tr>
+    </form>
+							
+									
+                                
+              <tr class="EstimatedShippingMethods" style=" display:none;">
+                             
+               <td colspan="5" style=" background-color:#efefef;">
+               
+               <table width="100%" border="0" cellspacing="0"  style=" background-color:#fff; border:1px solid #ccc	" cellpadding="0">
+					    <tr>
+					      <td class="Alert" style="width:100%; border:0;">
+							<div class="EstimatedShippingMethods" style=" font-size:11px;">
+									<div class="ShippingMethodList">
+                                    Digite um Cep para calcular o frete
+									</div>
+							</div>
+                          </td>
+				        </tr>
+				 </table>
+                 
+				</td>
+    </tr>
+               
+                <tr style="%%GLOBAL_HideShoppingCartShippingEstimator%%">
+                             
+               <td colspan="5">
+               
+               <table width="100%" border="0" cellspacing="0" cellpadding="0">
+					    <tr>
+					      <td class="Alert MiniIcoFrete" style="width:100%; border:0;">
+								<label>Calcular Frete</label>
+                                
+                                <select style="display:none" class="Field200" name="shippingZoneCountry" id="shippingZoneCountry" >
+											<option value="30">Brasil</option>
+								</select>
+                                <select style=" padding:2px; margin:0 5px 0 0;display: %%GLOBAL_ShippingHideStateList%%" class="Textbox Field200" name="shippingZoneState" id="shippingZoneState">
+											%%GLOBAL_ShippingStateList%%
+								</select>
+                                CEP:
+								<input name="shippingZoneZip1" type="text" class="Field100 Textbox" id="shippingZoneZip1" style="width:80px; margin:0 5px 0 0;" onkeyup="if ( this.value.length==5) { document.getElementById('shippingZoneZip2').focus();}"  value="%%GLOBAL_shippingZoneZip1%%" maxlength="5" size="5" />
+                                <input  name="shippingZoneZip2" type="text" class="Field100 Textbox" id="shippingZoneZip2" style="width:20px; margin:0 5px 0 0;" onkeyup="if ( this.value.length==3) { Cart.EstimateShipping();}" value="%%GLOBAL_shippingZoneZip2%%" maxlength="3" size="1" /> 
+								<img style="cursor:pointer; padding:3px;" src="%%GLOBAL_TPL_PATH%%/img/botao_calcular.gif"  onclick="Cart.EstimateShipping() " />
+                     
+                          </td>
+				        </tr>
+				 </table>
+                 
+				</td>
+                </tr>
+               
+				</tr>
+             <!--  <tr >
+			 %%Panel.SideGiftCertificateCodeBox%%
+    </tr>-->
+              <tr >
+              %%Panel.SideCouponCodeBox%%
+              </tr>
+          <tr >
+              %%SNIPPET_Coupons%%
+              </tr>
+					
+					<tr class="SubTotal" style="%%GLOBAL_HideGiftWrappingTotal%%">
+						<td colspan="4">%%LNG_GiftWrapping%%:</td>
+						<td><em class="ProductPrice">%%GLOBAL_GiftWrappingTotal%%</em></td>
+					</tr>
+					<tr style="display: %%GLOBAL_HideShoppingCartImmediateDownload%%" class="SubTotal">
+						<td colspan="4">%%LNG_Delivery%%:</td>
+						<td><em class="ProductPrice">%%LNG_Download%%</em></td>
+					</tr>
+					<tr class="SubTotal" style="%%GLOBAL_HideShoppingCartShippingEstimator%%">
+						<td colspan="5" style="text-align: right;">
+							
+						</td>
+					</tr>
+					<tr style="display:%%GLOBAL_HideShoppingCartShippingCost%%" class="SubTotal">
+						<td colspan="4">%%LNG_Shipping%% (%%GLOBAL_ShippingProvider%%):</td>
+						<td><em class="ProductPrice">%%GLOBAL_ShippingCost%%</em></td>
+					</tr>
+					<tr style="display: %%GLOBAL_HideShoppingCartHandlingCost%%" class="SubTotal">
+						<td colspan="4">%%LNG_Handling%%:</td>
+						<td><em class="ProductPrice">%%GLOBAL_HandlingCost%%</em></td>
+					</tr>
+					<tr class="SubTotal">
+						<td colspan="4">%%GLOBAL_CartTotalText%%:</td>
+						<td><em class="ProductPrice">%%GLOBAL_CartSubTotal%%</em></td>
+					</tr>
+					
+					%%SNIPPET_GiftCertificates%%
+					<tr class="SubTotal" style="display: %%GLOBAL_HideAdjustedTotal%%">
+						<td colspan="4">%%GLOBAL_AdjustedCartTotalText%%:</td>
+						<td><em class="ProductPrice">%%GLOBAL_AdjustedCartSubTotal%%</em></td>
+					</tr>
+				</tbody>
+			
+			
+
+		
+		  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		    <tr>
+		      <td><a href="%%GLOBAL_ShopPath%%" onclick="%%GLOBAL_OptimizerLinkFunction%%" title="%%LNG_CheckoutButtonTitle%%"> %%GLOBAL_CartCheckoutButtonOptimizerScriptTag%% <img src="%%GLOBAL_TPL_PATH%%/img/botao_continuar_comprando.gif" alt="" /> %%GLOBAL_CartCheckoutButtonOptimizerNoScriptTag%% </a></td>
+		      <td align="right"><div class="CheckoutButton" style="%%GLOBAL_HideCheckoutButton%%"> <a href="%%GLOBAL_CheckoutLink%%" onclick="%%GLOBAL_OptimizerLinkFunction%%" title="%%LNG_CheckoutButtonTitle%%"> %%GLOBAL_CartCheckoutButtonOptimizerScriptTag%% <img src="%%GLOBAL_TPL_PATH%%/img/botao_avancar2.gif" alt="" /> %%GLOBAL_CartCheckoutButtonOptimizerNoScriptTag%% </a> </div></td>
+	        </tr>
+	      </table>
+         
+	</div>
+</div>

@@ -1,0 +1,66 @@
+.Header {  background-image:url(../header.png); background-position:center top; height:180px}
+
+.TabelaTopo { width:970px; text-align:left} 
+
+.Telefone { padding:6px; color:#666}
+
+
+
+.Telefone { float:left; color:#ccc}
+.BotaoTopoMinhaConta div { float:right; padding:20px; width:120px;}
+.BotaoTopoCarrinho div { float:right; padding:20px; width:130px;}
+
+.TopMenu {  background-image:url(../img/TopMenu.png); text-align: center; height:20px;padding:9px 5px 0 5px; }
+.TopMenu li { display:inline; text-transform:uppercase 	 }
+.TopMenu a { font-size:12px; color:#FFF; padding-right:10px;text-decoration:none}
+
+.Logo {width:370px; height:211px; vertical-align:middle; margin-left: -60px;}
+.Logo * { vertical-align:middle; margin-left: -60px;}
+
+.BarH { height:60px; width:970px; text-align:left}
+
+
+
+.LoginTopo { padding:15px 0 0 155px}
+.LoginTopo .InputTopo { border:0; padding:5px 3px 5px 3px; background:0; margin:0}
+.LoginTopo .User { width:160px; margin-right:25px}
+.LoginTopo .Senha { width:90px; margin-right:13px}
+.LoginTopo .Botao {width:60px; height:32px; cursor:pointer; padding:10px }
+
+
+
+.BuscaTopoZ {padding:15px 0 0 115px; width:255px; text-align:left}
+.BuscaTopoZ .InputTextoZ  { width:260px;float:left;background:none; border:0;padding:5px 3px 5px 3px; margin-right:5px}
+.BuscaTopoZ .BotaoZ { cursor: pointer; width:60px; background:none; border:0; float: right; height:32px; margin-left: 270px; margin-top: -25px;}
+
+.ClienteLogado { padding:15px 15px 15px 45px; font-size:12px;} 
+.ClienteLogado a { color:#333}
+
+
+
+.Departamentos { 	 background-image:url(../departamentos.png); line-height:40px; text-align:center;text-align:center;}
+.Departamentos * { }
+.Departamentos div { display:inline; padding:8px 28px 8px 28px;}
+.Departamentos a { color:#000B49; font-weight:bold; text-transform:uppercase; text-decoration:none; font-size:12px; }
+
+
+
+/***********************/
+
+
+/* login header */
+.HeaderLogin .Save { background-image:url(../img/LoginHeaderSave.gif); background-position:right top; color:#FFF; width:314px;height:23px; float:right; text-align:right; padding-right:55px; padding-top:5px; font-size:13px; font-weight:bold; }
+
+
+
+
+
+.LoginUser { color:#FFF}
+.LoginUser p { padding:22px 0}
+.LoginUser a, .LoginUser,  .LoginUser u  { color:#1d1d1e;  font-size:12px;color:#FFF; text-decoration:none}
+
+
+.BuscaTop { background-image:url(../img/Busca.jpg); height:33px; text-align:center}
+.BuscaTop form { background-image:url(../img/CampoBusca.jpg); height:33px; padding-top:4px; text-align:left; width:454px;}
+.BuscaTop form #search_query { margin-left:145px; width:255px; background:none; border:0;}
+.BuscaTop form .BotaoBusca { background:none; border:0; cursor:pointer; margin-left:6px; width:33px }

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body>
+	<div id="Container">
+	%%Panel.Header%%
+
+	<div id="Wrapper">
+		%%Panel.WrapperBanner%%
+		<div class="Left" id="LayoutColumn1">
+            %%Panel.SideLiveChatServices%%
+			%%Panel.SideAccountMenu%%
+			%%Panel.SideAccountStoreCredit%%
+		</div>
+		<div class="Content West" id="LayoutColumn2">
+			<div class="Block YourAccount">
+				<h2>%%LNG_YourAccount%%</h2>
+				<div class="BlockContent">
+					<p class="InfoMessage">%%LNG_YourAccountHelpIntro%%</p>
+					<ul>
+						<li class="IcoAccMensagens IcoAcc" style="display: %%GLOBAL_HideMessagesMenu%%"><a href="%%GLOBAL_ShopPath%%/areadecliente.php?action=inbox">%%LNG_ViewMessages%%</a><br />%%LNG_ViewMessagesDescription%%</li>
+						<li class="IcoAccPedidosStatus IcoAcc"><a href="%%GLOBAL_ShopPath%%/areadecliente.php?action=order_status">%%LNG_ViewYourOrderStatus%%</a><br /> %%LNG_ViewOrderStatusDescription%%</li>
+						<li class="IcoAccPedidos IcoAcc"><a href="%%GLOBAL_ShopPath%%/areadecliente.php?action=view_orders">%%LNG_CompletedOrders%%</a><br /> %%LNG_CompletedOrdersDescription%%</li>
+						
+						<li class="IcoAccEnderecos IcoAcc"><a href="%%GLOBAL_ShopPath%%/areadecliente.php?action=address_book">%%LNG_YourAddressBook%%</a><br /> %%LNG_AddressBookDescription%%</li>
+						<li class="IcoAccFavoritos IcoAcc" style="display:%%GLOBAL_HideWishlist%%"><a href="%%GLOBAL_ShopPath%%/minhaslistas.php">%%LNG_WishLists%%</a><br /> %%LNG_WishListsDescription%%</li>
+						<li class="IcoAccDados IcoAcc"><a href="%%GLOBAL_ShopPath%%/areadecliente.php?action=account_details">%%LNG_YourAccountDetails%%</a><br /> %%LNG_AccountDetailsDescription%%</li>
+						<li class="IcoAccFavoritos IcoAcc"><a href="%%GLOBAL_ShopPath%%/areadecliente.php?action=recent_items">%%LNG_RecentlyViewedItems%%</a><br /> %%LNG_RecentlyViewedItemsDescription%%</li>
+					</ul>
+				</div>
+			</div>
+		</div>		<br class="Clear" />
+	</div>
+	%%Panel.Footer%%
+</div>
+</body>
+</html>

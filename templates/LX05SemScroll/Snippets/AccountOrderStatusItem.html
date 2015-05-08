@@ -1,0 +1,67 @@
+<script type="text/javascript"> 
+$(document).ready(function(){
+		$("#RastrearPedido%%GLOBAL_OrderId%%").fancybox({ 
+		'frameWidth': 619, 
+		'frameHeight': 460, 
+		'callbackOnShow': function(){}
+	});
+});
+</script>
+
+<li style="list-style:none">
+	<form action="%%GLOBAL_ShopPath%%/areadecliente.php" method="get" class="FloatRight" style="Clear:right;">
+		<input type="hidden" name="action" value="view_order" />
+		<input type="hidden" name="order_id" value="%%GLOBAL_OrderId%%" />
+		<input type="image"  src="%%GLOBAL_TPL_PATH%%/img/botao_detalhes_da_compra.gif"alt="%%LNG_ViewOrder%%" />
+	</form>
+
+	<form action="%%GLOBAL_ShopPath%%/areadecliente.php" method="get" class="FloatRight" style="Clear:right;">
+		<input type="hidden" name="action" value="reorder" />
+		<input type="hidden" name="order_id" value="%%GLOBAL_OrderId%%" />
+		<input type="image" src="%%GLOBAL_TPL_PATH%%/img/botao_comprar_novamente.gif" alt="%%LNG_Reorder%%" /><br />
+	<div style="display:%%GLOBAL_HideTrackingText%%">
+    <a href="rastrearpedido.php?CodRastreio=%%GLOBAL_OrderTrackingNo%%" id="RastrearPedido%%GLOBAL_OrderId%%"><img src="%%GLOBAL_TPL_PATH%%/img/botao_rastrear_pedido.gif" /></a>
+	</div>
+    
+    </form>
+	
+	<h3>%%LNG_Order%% #%%GLOBAL_OrderId%%</h3>
+    <div class="StatusPedido">%%LNG_ThisOrderIsMarkedAs%% <strong>%%GLOBAL_OrderStatus%%</strong></div>
+	<p class="Meta">
+		%%LNG_OrderDate%%: %%GLOBAL_OrderDate%%<br />
+		%%LNG_Recipient%%: %%GLOBAL_Recipient%%
+	</p>
+
+
+		<div style="display:%%GLOBAL_HideExtraOrderInfo%%" class="LH150">
+			<p style="display:%%GLOBAL_HidePhysicalShipmentInfo%%">
+				%%GLOBAL_ShippedWith%%<br />
+				<span style="display:%%GLOBAL_HideTrackingText%%">
+					%%LNG_OrderTrackingNoIs%% <strong><em>%%GLOBAL_OrderTrackingNo%%</em></strong>
+				</span>
+				<span style="display:%%GLOBAL_HideTrackingLink%%"><br />
+					<a href="%%GLOBAL_TrackURL%%" target="_blank">%%LNG_ClickHereToTrackYourOrder%%</a>
+				</span>
+			</p>
+			<p style="display:%%GLOBAL_HideDigitalShipmentInfo%%">%%LNG_ShippedDigitalDownload%%</p>
+		</div>
+
+		<div style="display:%%GLOBAL_HidePaymentInstructions%%">
+			<p>%%LNG_YourOrderTotalIs%% <strong><em class="ProductPrice">%%GLOBAL_OrderTotal%%</em></strong></p>
+
+			<p><strong>%%LNG_HeresHowToPayForYourOrder%%:</strong></p>
+
+			<div class="HowToPay">
+				<span style="display:%%GLOBAL_HidePaymentInstructions%%">%%GLOBAL_OrderInstructions%%</span>
+			</div>
+		</div>
+
+		<strong>%%LNG_YourOrderContainsTheFollowingItems2%%</strong>
+		<blockquote>
+			<ul class="OrderItemList">
+				%%GLOBAL_AccountOrderItemList%%
+			</ul>
+		</blockquote>
+	
+	<hr />
+</li>

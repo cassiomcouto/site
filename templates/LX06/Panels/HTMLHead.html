@@ -1,0 +1,343 @@
+<head>
+	%%GLOBAL_OptimizerControlScript%%
+<title>%%Page.WindowTitle%%</title>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--
+<!---inicio codigo bloqueio do botão direito do mouse --->
+<!--<script language=Javascript>
+<!--
+
+//Disabilita botão direito do mouse click Script
+//By SCRIPTSPHPBR.COM Email: contato@scriptsphpbr.com
+
+var message="Conteúdo protegido pelo autor (SCRIPTSPHPBR.COM)";
+
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+// --> 
+<!--</script>-->
+<!---fim codigo bloqueio do botão direito do mouse --->
+<meta http-equiv="Content-Type" content="text/html; charset=%%GLOBAL_CharacterSet%%" />
+<meta name="description" content="%%Page.MetaDescription%%" />
+<meta name="keywords" content="%%Page.MetaKeywords%%" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="shortcut icon" href="%%GLOBAL_Favicon%%" />
+%%GLOBAL_Stylesheets%%
+<link rel="stylesheet" type="text/css" href="%%GLOBAL_ShopPath%%/css/estilo.css?%%GLOBAL_JSCacheToken%%">
+%%GLOBAL_HeadRSSLinks%%
+%%GLOBAL_TrackingCode%%
+%%GLOBAL_DesignModeStyleSheet%%
+%%GLOBAL_HeaderImageStyle%%
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/jquery.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/menudrop.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/common.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/iselector.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/jquery.ezpz_hint.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/jquery/plugins/fancybox/fancybox.js?33018"></script>
+<link href="%%GLOBAL_ShopPath%%/javascript/jquery/plugins/fancybox/fancybox.css" media="all" type="text/css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<!-- include jQuery library -->
+<!-- include Cycle plugin -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("input#search_query").ezpz_hint();
+	$("input#LoginX").ezpz_hint();
+	
+	$(".hidden").hide("fast");
+	
+	$("li.ItemHiden").hover(
+				function() { $(this).children(".hidden").show("fast"); },
+				function() { $(this).children(".hidden").hide("fast"); }
+	);
+	
+});
+
+</script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+config.ShopPath = '%%GLOBAL_ShopPath%%';
+config.AppPath = '%%GLOBAL_AppPath%%';
+var ThumbImageWidth = %%GLOBAL_ProductThumbImageWidth%%;
+var ThumbImageHeight = %%GLOBAL_ProductThumbImageHeight%%;
+//]]>
+</script>
+%%GLOBAL_AdditionalScriptTags%%
+%%GLOBAL_QuickSearchJS%%
+%%GLOBAL_RTLStyles%%
+
+<script type="text/javascript" >
+function tabControl(d){var l=((d.childNodes[0].tagName==undefined)?1:0);var e=d.childNodes[l].childNodes[l];if(!e||!e.childNodes[l]){d.style.display="none";var m=document.getElementsByClassName("maisinfo");if(m[0]){m[0].style.display="none"}return false}var h=e.childNodes[l];h.className="on";var b=d.childNodes;var j=firstDiv(b);if(!j){d.style.display="none";return false}var f=d.childNodes[j];f.className="divTabArea on";var g;var n=e.childNodes;for(g in n){if(n[g].id){n[g].onclick=function(){showTab(this,j)}}}var c=e.offsetHeight;if(navigator.appVersion.indexOf("MSIE 7")!=-1){var o=document.getElementById("cfForm").offsetWidth;var k=0;for(w in n){wLi=n[w].offsetWidth;if(wLi){k+=wLi}}var a=Math.ceil(k/o);if(a>1){c=(a-1)*c;for(cn in b){cClass=b[cn].className;if(cClass&&(cClass=="divTabArea")||(cClass=="divTabArea on")){b[cn].style.margin=c+"px 0 0"}}}}}function firstDiv(b){var a;for(a in b){if(b[a].className=="divTabArea"){return a}}return false}function showTab(i,f){var e;var d=f;var c=i.id;var h=i.parentNode;var a=h.childNodes;var b=h.parentNode.parentNode.childNodes;for(e in a){if(a[e].id==c){a[e].className="on"}else{a[e].className=""}}var g=c.substring(2);for(d in b){divClass=b[d].className;if(divClass&&divClass.indexOf("divTabArea")!=-1){if(b[d].id.substring(3)==g){b[d].className="divTabArea on"}else{b[d].className="divTabArea"}}}};
+</script>
+	<!--modificacoes-->
+<script type="text/javascript">
+var Frete = {
+	Abrir: function(itemId)
+	{
+		$.iModal({
+			type: 'ajax',
+			url: '%%GLOBAL_ShopPath%%/remote.php?w=simularfrete&id='+itemId
+		});
+	}
+};
+var Parcelas = {
+	Abrir: function(itemId)
+	{
+		$.iModal({
+			type: 'ajax',
+			url: '%%GLOBAL_ShopPath%%/remote.php?w=simularparcelas&id='+itemId
+		});
+	}
+};
+var Indique = {
+	Abrir: function(itemId)
+	{
+		$.iModal({
+			type: 'ajax',
+			url: '%%GLOBAL_ShopPath%%/remote.php?w=recomendar&id='+itemId
+		});
+	}
+};
+
+var Orcamento = {
+	Abrir: function(itemId)
+	{
+		$.iModal({
+			type: 'ajax',
+			url: '%%GLOBAL_ShopPath%%/remote.php?w=orcamento&id='+itemId
+		});
+	}
+};
+
+</script>
+<script language=JavaScript>
+
+<!--
+
+  function stopError() {
+
+  return true;
+
+  }
+
+  window.onerror = stopError;
+
+  // -->
+
+</script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/modificacoes/popups.js"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/modificacoes/ajax.js"></script>
+	<script type="text/javascript">
+
+	var ajax = new sack();
+	var currentClientID=false;
+	function getClientData()
+	{ 
+
+		var clientId = document.getElementById('FormField_13').value.replace(/[^0-9]/g,'');
+
+		if(clientId.length<=9 && clientId!=currentClientID){
+			currentClientID = clientId
+			ajax.requestFile = '%%GLOBAL_ShopPath%%/modificacoes/getClient.php?getClientId='+clientId;
+			ajax.onCompletion = showClientData;
+			ajax.runAJAX();		
+		}
+		
+
+		
+	}
+
+	
+	function showClientData()
+	{
+		var formObj = document.forms['clientForm'];	
+		eval(ajax.response);
+	}
+
+	
+	
+	function initFormEvents()
+	{
+		document.getElementById('FormField_13').onblur = getClientData;
+		document.getElementById('FormField_6').onblur = validar;
+
+	}
+	
+	function validar() {
+	var obj = document.getElementById('FormField_6');
+	var s = (obj.value).replace(/\D/g,'');
+	var tam=(s).length; // removendo os caracteres não numéricos
+	if (!(tam==11 || tam==14)){ // validando o tamanho
+		alert("'"+s+"' Não é um CPF ou um CNPJ válido!" ); // tamanho inválido
+		obj.value = '';
+		return false;
+	}
+	
+// se for CPF
+	if (tam==11 ){
+		if (!validaCPF(s)){ // chama a função que valida o CPF
+			alert("'"+s+"' Não é um CPF válido!" ); // se quiser mostrar o erro
+			obj.value = '';
+			return false;
+		}
+
+		obj.value=maskCPF(s);	// se validou o CPF mascaramos corretamente
+		return true;
+	}
+	
+// se for CNPJ			
+	if (tam==14){
+		if(!validaCNPJ(s)){ // chama a função que valida o CNPJ
+			alert("'"+s+"' Não é um CNPJ válido!" ); // se quiser mostrar o erro
+			obj.value = '';
+			return false;			
+		}
+		
+		obj.value=maskCNPJ(s);	// se validou o CNPJ mascaramos corretamente
+		return true;
+	}
+}
+
+function ValidaCpf (cpf) {
+ if (cpf.length != 11 || cpf == "00000000000" || cpf == "11111111111" || 
+     cpf == "22222222222" || cpf == "33333333333" || cpf == "44444444444" || 
+     cpf == "55555555555" || cpf == "66666666666" || cpf == "77777777777" || 
+     cpf == "88888888888" || cpf == "99999999999")
+    return false;
+ val = 0;
+ 
+ //Calcula o penúltimo dígito verificador
+ for (i=0; i < 9; i   )
+    val  = parseInt(cpf.charAt(i)) * (10 - i);
+ 
+ rev = 11 - (val % 11);
+ 
+ if (rev == 10 || rev == 11)
+    rev = 0;
+  
+ //Retorna falso se o dígito calculado eh diferente do passado na string 
+ if (rev != parseInt(cpf.charAt(9)))
+    return false;
+  
+ //Calcula o último dígito verificador
+ val = 0;
+ for (i = 0; i < 10; i   )
+    val  = parseInt(cpf.charAt(i)) * (11 - i);
+ 
+ rev = 11 - (val % 11);
+ 
+ if (rev == 10 || rev == 11)
+    rev = 0;
+ //Retorna falso se o dígito calculado for diferente do passado na string 
+ if (rev != parseInt(cpf.charAt(10)))
+    return false;
+ 
+ //Cpf válido
+ return true;
+ 
+}
+
+function validaCNPJ(CNPJ) {
+	var a = new Array();
+	var b = new Number;
+	var c = [6,5,4,3,2,9,8,7,6,5,4,3,2];
+	for (i=0; i<12; i++){
+		a[i] = CNPJ.charAt(i);
+		b += a[i] * c[i+1];
+	}
+	if ((x = b % 11) < 2) { a[12] = 0 } else { a[12] = 11-x }
+	b = 0;
+	for (y=0; y<13; y++) {
+		b += (a[y] * c[y]);
+	}
+	if ((x = b % 11) < 2) { a[13] = 0; } else { a[13] = 11-x; }
+	if ((CNPJ.charAt(12) != a[12]) || (CNPJ.charAt(13) != a[13])){
+		return false;
+	}
+	return true;
+}
+
+function soNums(e)
+{
+	if (document.all){var evt=event.keyCode;}
+	else{var evt = e.charCode;}
+	if (evt <20 || (evt >47 && evt<58)){return true;}
+	return false;
+}
+
+//	função que mascara o CPF
+function maskCPF(CPF){
+	return CPF.substring(0,3)+"."+CPF.substring(3,6)+"."+CPF.substring(6,9)+"-"+CPF.substring(9,11);
+}
+
+//	função que mascara o CNPJ
+function maskCNPJ(CNPJ){
+	return CNPJ.substring(0,2)+"."+CNPJ.substring(2,5)+"."+CNPJ.substring(5,8)+"/"+CNPJ.substring(8,12)+"-"+CNPJ.substring(12,14);	
+}
+
+window.onload = initFormEvents;
+
+</script>
+</head>
+<Body onselectstart="return false">
+

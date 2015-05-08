@@ -1,0 +1,26 @@
+				<div class="SearchPaging" style="display: %%GLOBAL_HideSectionPaging%%">
+					%%GLOBAL_SectionPaging%%
+				</div>
+
+				<div class="SearchSorting Clear" style="display: %%GLOBAL_HideSectionSorting%%">
+					<div style="visibility:hidden;" id="SearchSortingSelectContainer">
+						%%LNG_SortBy%%:
+						<select id="SearchSorting%%GLOBAL_SectionType%%" name="SearchSorting%%GLOBAL_SectionType%%" class="SearchSortingList">
+							%%GLOBAL_SectionSortingOptions%%
+						</select>
+					</div>
+					<script language="javascript" type="text/javascript">//<![CDATA[
+					// reveal the sorting options when is js available -- visiblity is used instead of display so the page flow doesn't change when loading
+					$('#SearchSortingSelectContainer').css('visibility', 'visible');
+					//]]></script>
+				</div>
+
+				<ul class="%%GLOBAL_SectionType%% %%GLOBAL_SectionExtraClass%% Clear" >
+					%%GLOBAL_SectionResults%%
+				</ul>
+
+				<br class="Clear" />
+
+				<div class="SearchPaging" style="display: %%GLOBAL_HideSectionPaging%%">
+					%%GLOBAL_SectionPaging%%
+				</div>

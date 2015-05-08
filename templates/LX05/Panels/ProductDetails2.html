@@ -1,0 +1,139 @@
+<script type="text/javascript" src="%%GLOBAL_AppPath%%/javascript/jquery/plugins/jCarousel/jCarousel.js?%%GLOBAL_JSCacheToken%%"></script>
+%%SNIPPET_ProductImageZoomer%%
+
+<script type="text/javascript">//<![CDATA[
+var ThumbURLs = new Array();
+var ProductImageDescriptions = new Array();
+var CurrentProdThumbImage = %%GLOBAL_CurrentProdThumbImage%%;
+var ShowVariationThumb =false;
+var ProductThumbWidth = %%GLOBAL_ProductThumbWidth%%;
+var ProductThumbHeight =  %%GLOBAL_ProductThumbHeight%%;
+var ProductMaxZoomWidth = %%GLOBAL_ProductMaxZoomWidth%%;
+var ProductMaxZoomHeight =  %%GLOBAL_ProductMaxZoomHeight%%;
+var ProductTinyWidth = %%GLOBAL_ProductMaxTinyWidth%%;
+var ProductTinyHeight =  %%GLOBAL_ProductMaxTinyHeight%%;
+
+%%GLOBAL_ProdImageJavascript%%
+
+var ShowImageZoomer = %%GLOBAL_ShowImageZoomer%%;
+
+var productId = %%GLOBAL_ProductId%%;
+//]]></script>
+
+
+%%GLOBAL_ProductDetailFlashMessages%%
+<div class="Block Moveable Panel PrimaryProductDetails" id="ProductDetails">
+  <div class="BlockContent">
+<table class="ProdutoFull" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="17%">
+    <div class="ProductThumb" style="%%GLOBAL_HideProductThumb%%">
+			%%GLOBAL_LightBoxImageJavascript%%
+			%%SNIPPET_ProductThumbImage%%
+
+			<div class="ImageCarouselBox" style="margin:0 auto; %%GLOBAL_HideImageCarousel%%">
+				<a id="ImageScrollPrev" class="prev" href="#"><img src="%%GLOBAL_IMG_PATH%%/LeftArrow.png" alt="" width="20" height="20" /></a>
+
+				<div class="ProductTinyImageList">
+					<ul>
+						%%SNIPPET_ProductTinyImages%%
+					</ul>
+				</div>
+
+				<a id="ImageScrollNext" class="next" href="#"><img src="%%GLOBAL_IMG_PATH%%/RightArrow.png" alt="" width="20" height="20" /></a>
+			</div>
+			<div style="%%GLOBAL_HideMorePicturesLink%%" class="SeeMorePicturesLink">
+				<a href="#" onclick="%%GLOBAL_TinyImageClickJavascript%% return false;" class="ViewLarger">%%GLOBAL_SeeMorePictures%%</a>
+			</div>
+		</div>
+    </td>
+    <td width="83%">
+    
+    	%%GLOBAL_ProductNameOptimizerScriptTag%%
+		<div class="TituloProd">%%GLOBAL_ProductName%%</div>
+		%%GLOBAL_ProductNameOptimizerNoScriptTag%%
+        
+        %%LNG_SKU%%: %%GLOBAL_SKU%%<br />
+        
+    	Avalia&ccedil;&atilde;o dos clientes:<img width="64" height="12" src="%%GLOBAL_IMG_PATH%%/IcoRating%%GLOBAL_Rating%%.gif" alt="" />
+						<span style="display:%%GLOBAL_HideReviewLink%%">(
+							<a href="#reviews" onclick="%%GLOBAL_ReviewLinkOnClick%%">
+								%%GLOBAL_ReviewLinkText%%
+							</a>
+						)</span><br /><br />
+                        
+        <div class="valorde">%%LNG_RRP%%:%%GLOBAL_RetailPrice%%</div>
+    
+		<div class="valorpor">%%GLOBAL_PriceLabel%%:<em class="ProductPrice VariationProductPrice">%%GLOBAL_ProductPrice%%</em><br />
+						<u>%%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%</u><br /><br />
+                        </div>
+                        
+        <div class="valorparcelas">%%GLOBAL_DescParcelas%%</div>
+        
+        %%SNIPPET_ProductAddToCart%%
+    </td>
+  </tr>
+</table>
+
+		
+<div id="divTC" class="divTabControl">
+            <div class="divTabs">
+            <ul class="ulTabs">
+                            <li id='li2'  >
+                                <span id="cfForm:L7:0:L7L2">Descri&ccedil;ao do Produto</span>
+                            </li>
+                            <li id='li3'  >
+                                <span id="cfForm:L7:1:L7L2">Mais Populares</span>
+                            </li>
+                            <li id='li4'  >
+                                <span id="cfForm:L7:2:L7L2">Garantia</span>
+                            </li>
+			</ul>
+            </div>
+			
+                <div class="divTabArea" id='div2'>
+                    <ul class="ProdutosListagem">
+                   	 	%%Panel.ProductDescription%%
+                    </ul>
+                </div>
+                <div class="divTabArea" id='div3'>
+                  <ul class="ProdutosListagem">
+                   		2222222222222222222
+                  </ul>
+                </div>
+                <div class="divTabArea" id='div4'>
+                     <ul class="ProdutosListagem">
+                      %%Panel.ProductWarranty%%
+                    </ul>
+                </div>
+        </div>
+        <script type="text/javascript">tabControl(document.getElementById('divTC'));</script>      
+	
+                        
+	
+    <!--
+    %%LNG_Vendor%%: %%GLOBAL_VendorName%%<br />
+    
+    %%LNG_Brand%%: <a href="%%GLOBAL_BrandLink%%">%%GLOBAL_BrandName%%</a><br />
+    
+    %%LNG_Condition%%: %%GLOBAL_ProductCondition%%<br />
+    
+    %%LNG_Weight%%: %%GLOBAL_ProductWeight%%<br />
+    
+    
+    
+    %%LNG_Availability%%:%%GLOBAL_Availability%%<br />
+    
+    %%LNG_Shipping%%: %%GLOBAL_ShippingPrice%%<br />
+    
+    %%LNG_CurrentStock%%: %%GLOBAL_InventoryList%%<br />
+    
+    %%LNG_GiftWrapping%%: %%GLOBAL_GiftWrappingAvailable%%<br />
+    
+    -->
+    
+
+		<br class="Clear" />
+		<hr />
+	</div>
+</div>

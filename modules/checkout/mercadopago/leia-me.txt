@@ -1,0 +1,7 @@
+1 - ponha o modulo mercadopago/ em modules/checkout/
+2 - configure o modulo de pagamento na loja e ponha a sonda geranda no site do mercadopago
+3 - acesse o mercadopago e configure a url de notificacao de pagamento para o modelo abaixo.
+
+exemplo http://www.seusite.com.br/modules/checkout/mercadopago/retorno.php
+
+pronto ja esta ok

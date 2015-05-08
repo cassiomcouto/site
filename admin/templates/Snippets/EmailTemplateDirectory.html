@@ -1,0 +1,18 @@
+<tr class="GridRow %%GLOBAL_ParentClass%%" id="%%GLOBAL_RowId%%">
+	<td style="%%GLOBAL_NestingIndent%%">
+		<a href="#" style="outline: none" onclick="this.blur(); EmailTemplates.ExpandDirectory('%%GLOBAL_RowId%%', '%%GLOBAL_RelativePath%%'); return false">
+			<img src="images/plus.gif" class="ExpandImg" style="vertical-align: bottom" border="0" alt="" />
+		</a>
+		<img src="images/folder.gif" style="vertical-align: bottom; padding-right: 4px" alt="" />
+		%%GLOBAL_FileName%%
+	</td>
+	<td>%%GLOBAL_FileSize%%</td>
+	<td>%%GLOBAL_FileDate%%</td>
+	<td>&nbsp;</td>
+</tr>
+<tr class="GridRow" id="Indicator_%%GLOBAL_RowId%%" style="display: none;">
+	<td style="height: 20px; %%GLOBAL_NestingIndent%%" colspan="4">
+		<img src="images/ajax-loader.gif" alt="" style="padding-left: 25px; vertical-align: bottom; padding-right: 4px;" />
+		%%LNG_LoadingPleaseWait%%
+	</td>
+</tr>

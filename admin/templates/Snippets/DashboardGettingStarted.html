@@ -1,0 +1,95 @@
+<div class="Heading1">%%LNG_Home%%</div>
+%%GLOBAL_Messages%%
+<div class="DashboardRightColumn">
+	<div class="DashboardPanel DashboardPanelCurrentNotifications" style="%%GLOBAL_HideNotificationsList%%">
+		<div class="DashboardPanelContent">
+			<h3>%%LNG_PendingItems%%</h3>
+			<ul>
+				%%GLOBAL_NotificationsList%%
+			</ul>
+		</div>
+	</div>
+	
+	<div class="DashboardPanel DashboardPanelVideoWalkthrough" style="%%GLOBAL_HideVideoWalkthrough%%">
+		<div class="DashboardPanelContent">
+			<h3>%%LNG_VideoWalkthroughIntro%%</h3>
+			<div class="VideoList">
+				<ul>
+					<li></li>
+				</ul>
+				<br class="Clear" />
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		lang.VideosUnavailable = "%%LNG_VideosUnavailable%%";
+		lang.VideosUnavailableLater = "%%LNG_VideosUnavailableLater%%";
+	</script>
+</div>
+<div class="DashboardLeftColumn">
+	<div class="DashboardPanel DashboardPanelFeatured DashboardPanelGettingStarted">
+		<div class="DashboardPanelContent">
+			<a href="#" class="ToggleLink GettingStartedToggleLink" style="%%GLOBAL_HideToggleGettingStartedAtGlance%%">%%LNG_SwitchToCommonTasks%%</a>
+			<h3>%%LNG_GettingStartedIntro%%</h3>
+			<table class="WizardContent">
+				<tr>
+					<td class="ConfigureStoreSettings %%GLOBAL_CompletedStepSettingsClass%%">
+						<a href="index.php?ToDo=viewSettings&wizard=1">%%LNG_GettingStartedStoreSettings%%</a>
+						<div>%%LNG_GettingStartedStoreSettingsDesc%%</div>
+						<div style="%%GLOBAL_HideCompletedStepSettings%%" class="Completed">%%LNG_StepCompleted%%</div>
+					</td>
+					<td class="DesignYourStore %%GLOBAL_CompletedStepDesignClass%%">
+						<a href="index.php?ToDo=viewTemplates&wizard=1">%%LNG_GettingStartedDesignStore%%</a>
+						<div>%%LNG_GettingStartedDesignStoreDesc%%</div>
+						<div style="%%GLOBAL_HideCompletedStepDesign%%" class="Completed">%%LNG_StepCompleted%%</div>
+					</td>
+					<td class="AddProducts %%GLOBAL_CompletedStepProductsClass%% Last">
+						<a href="index.php?ToDo=addProduct&wizard=1">%%LNG_GettingStartedAddProducts%%</a>
+						<div>%%LNG_GettingStartedAddProductsDesc%%</div>
+						<div style="%%GLOBAL_HideCompletedStepProducts%%" class="Completed">%%LNG_StepCompleted%%</div>
+					</td>
+				</tr>
+				<tr class="Last">
+					<td class="PaymentMethods %%GLOBAL_CompletedStepPaymentMethodsClass%%">
+						<a href="index.php?ToDo=viewCheckoutSettings&wizard=1">%%LNG_GettingStartedPaymentMethods%%</a>
+						<div>%%LNG_GettingStartedPaymentMethodsDesc%%</div>
+						<div style="%%GLOBAL_HideCompletedStepPaymentMethods%%" class="Completed">%%LNG_StepCompleted%%</div>
+					</td>
+					<td class="TaxSettings  %%GLOBAL_CompletedStepTaxSettingsClass%%">
+						<a href="index.php?ToDo=viewTaxSettings&wizard=1">%%LNG_GettingStartedTaxSettings%%</a>
+						<div>%%LNG_GettingStartedTaxSettingsDesc%%</div>
+						<div style="%%GLOBAL_HideCompletedStepTaxSettings%%" class="Completed">%%LNG_StepCompleted%%</div>
+					</td>
+					<td class="ShippingOptions  %%GLOBAL_CompletedStepShippingOptionsClass%% Last">
+						<a href="index.php?ToDo=viewShippingSettings&wizard=1">%%LNG_GettingStartedShippingOptions%%</a>
+						<div>%%LNG_GettingStartedShippingOptionsDesc%%</div>
+						<div style="%%GLOBAL_HideCompletedStepShippingOptions%%" class="Completed">%%LNG_StepCompleted%%</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="DashboardPanel DashboardPanelHelpArticles" style="%%GLOBAL_HidePopularHelpArticles%%">
+		<div class="DashboardPanelContent" style="overflow: auto">
+			<form action="%%GLOBAL_SearchKnowledgeBaseUrl%%" method="post" class="DashboardHelpArticlesSearchForm" style="%%GLOBAL_HideSearchKnowledgeBase%%">
+				<input type="text" name="q" class="DashboardHelpSearchQuery DashboardHelpSearchHasImage" />
+				<span class="DashboardActionButton">
+					<a href="#">
+						<span class="ButtonText">%%LNG_Go%%</span>
+					</a>
+				</span>
+			</form>
+			<h3>%%LNG_PopularHelpArticles%%</h3>
+			<div class="HelpArticlesList">
+				<img src="images/ajax-loader.gif" alt="" />
+			</div>
+			<span class="DashboardActionButton DashboardBrowseAllHelpArticlesButton">
+				<a href="%%GLOBAL_ViewKnowledgeBaseLink%%">
+					<span class="ButtonArrow"></span>
+					<span class="ButtonText ButtonTextWithArrow">%%LNG_ViewKnowledgeBase%%</span>
+				</a>
+			</span>
+		</div>
+	</div>
+</div>

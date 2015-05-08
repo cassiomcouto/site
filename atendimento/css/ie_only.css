@@ -1,0 +1,21 @@
+/* Styles for non NS4 browsers */
+
+.sectionLink {
+	line-height: 20px;
+}
+
+input, textarea, select {
+	border : 1px solid #C1CBD6;
+}
+
+input { text-indent : 2px; }
+
+input.button {
+	border : 1px solid #B4B4B4;
+}
+
+.sectionLink {
+	background-image: url(../images/dot.gif);
+	background-repeat: no-repeat;
+	background-position: 75px;
+}

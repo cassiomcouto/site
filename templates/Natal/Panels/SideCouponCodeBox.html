@@ -1,0 +1,20 @@
+               
+               <td colspan="5">
+               
+               <table width="100%" border="0" cellspacing="0" cellpadding="0">
+					    <tr>
+					      <td class="Alert MiniIcoDesconto" style="width:72%; border:0;">
+                          <form onsubmit="return Cart.CheckCouponCode()" action="%%GLOBAL_ShopPath%%/compras.php" method="post">
+                           <input type="hidden" name="action" value="applycoupon" />
+                           <script type="text/javascript">
+                                lang.EnterCouponCode = "%%LNG_EnterCouponCode%%";
+                            </script>
+                            <label>Cupom de Desconto</label><input type="text" name="couponcode" id="couponcode" class="Textbox Field100" />
+							<input type="image" alt="%%LNG_Go%%" src="%%GLOBAL_TPL_PATH%%/img/botao_ok.gif" style="vertical-align: middle;" />
+                             </form>
+                            </td>
+				        </tr>
+				 </table>
+                 
+				</td>
+              

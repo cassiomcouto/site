@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body>
+	<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/cart.js?%%GLOBAL_JSCacheToken%%"></script>
+	<div id="Container">
+    
+    %%Panel.Header%%
+    
+	
+	<div class="SContent zOrderPay">
+    <center>
+    <div class="BlockFull" align="left">
+			<h1>%%LNG_ThanksForYourOrder%%</h1>
+            <div class="ContPadding" align="left">
+           
+			<div class="Block">
+
+				<div class="BlockContent">
+						<p class="ErrorMessage" style="display:%%GLOBAL_HideError%%">
+							%%GLOBAL_ErrorMessage%%
+						</p>
+
+						<div style="display:%%GLOBAL_HidePaidOrderConfirmation%%">
+							<p class="SuccessMessage" style="display:%%GLOBAL_HideSuccess%%">
+								%%LNG_JustSentAnEmailConfirmation%%
+							</p>
+
+							<p style="display:%%GLOBAL_HidePhysicalOrderConfirmation%%">
+								%%GLOBAL_PhysicalOrderConfirmation%%
+							</p>
+							<p style="display: %%GLOBAL_HidePhysicalViewOrderLink%%">
+								<br />
+								<a href="%%GLOBAL_ShopPath%%/orderstatus.php">%%LNG_ViewYourOrder%%</a>
+							</p>
+							<p style="display:%%GLOBAL_HideDigitalOrderConfirmation%%">
+								%%GLOBAL_DigitalOrderConfirmation%%
+							</p>
+							<p style="display:%%GLOBAL_HideDigitalOrderDownloadLink%%">
+								<br />
+								<a href="%%GLOBAL_ShopPath%%/orderstatus.php">%%LNG_DownloadTheItemsYouOrdered%%</a>
+							</p>
+						</div>
+
+						<div style="display: %%GLOBAL_HideAwaitingPayment%%">
+							<p class="SuccessMessage" style="display:%%GLOBAL_HideSuccess%%">
+								%%LNG_JustSentAnEmailConfirmation%%
+							</p>
+							%%LNG_OrderAwaitingPayment%%
+						</div>
+						%%GLOBAL_OrderConfirmationDetails%%
+						%%SNIPPET_OfflinePaymentMessage%%
+					</div>
+					<div style="display:%%GLOBAL_HideProductUpdates%%; clear: both;">
+						<br />
+						<h2>%%LNG_ReceiveProductUpdatesViaEmail%%</h2>
+						<div class="BlockContent">
+							<form action="%%GLOBAL_ShopPathSSL%%/productupdates.php" method="post" id="productUpdatesForm">
+								<input type="hidden" name="Email" id="Email" value="%%GLOBAL_CustomerEmail%%" />
+								%%LNG_ReceiveProductUpdatesViaEmailIntro%%
+								<br /><br />
+								%%GLOBAL_ProductUpdatesList%%
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="image" src="%%GLOBAL_IMG_PATH%%/%%GLOBAL_SiteColor%%/NotifyMeButton.gif" />
+								%%Panel.ProductUpdatesJavaScript%%
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+            </div>
+	</div>
+		<br class="Clear" />
+
+    </center>
+	</div>
+	%%Panel.Footer%%
+</div>
+</body>
+</html>
+
+
+<!-- %%Panel.CartBreadcrumb%%-->

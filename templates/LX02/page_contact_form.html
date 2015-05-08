@@ -1,0 +1,44 @@
+<br />
+<p class="ErrorMessage" style="display: %%GLOBAL_HideFormError%%">
+	%%LNG_BadContactFormCaptcha%%
+</p>
+
+<form action="%%GLOBAL_ShopPath%%/conteudo.php?action=sendContactForm" method="post" id="ContactForm" class="PL20">
+	<input type="hidden" name="page_id" id="page_id" value="%%GLOBAL_PageId%%" />
+	<div class="FormContainer HorizontalFormContainer">
+		<dl>
+			<dt style="display: %%GLOBAL_HideFullName%%">&nbsp;&nbsp; %%LNG_ContactName%%:</dt>
+			<dd style="display: %%GLOBAL_HideFullName%%"><input name="contact_fullname" type="text" class="Textbox Field200" id="contact_fullname" value="%%GLOBAL_ContactName%%" size="50" /></dd>
+
+			<dt><span class="Required">*</span>&nbsp; %%LNG_ContactEmail%%:</dt>
+			<dd><input name="contact_email" type="text" class="Textbox Field200" id="contact_email" value="%%GLOBAL_ContactEmail%%" size="50" /></dd>
+
+			<dt style="display: %%GLOBAL_HideCompanyName%%">&nbsp;&nbsp; %%LNG_ContactCompanyName%%:</dt>
+			<dd style="display: %%GLOBAL_HideCompanyName%%"><input name="contact_companyname" type="text" class="Textbox Field200" id="contact_companyname" value="%%GLOBAL_ContactCompanyName%%" size="50" /></dd>
+
+			<dt style="display: %%GLOBAL_HidePhone%%">&nbsp;&nbsp; %%LNG_ContactPhone%%:</dt>
+			<dd style="display: %%GLOBAL_HidePhone%%"><input name="contact_phone" type="text" class="Textbox Field200" id="contact_phone" value="%%GLOBAL_ContactPhone%%" size="50" /></dd>
+
+			<dt style="display: %%GLOBAL_HideOrderNo%%">&nbsp;&nbsp; %%LNG_ContactOrderNo%%:</dt>
+			<dd style="display: %%GLOBAL_HideOrderNo%%"><input name="contact_orderno" type="text" class="Textbox Field200" id="contact_orderno" value="%%GLOBAL_ContactOrderNo%%" size="50" /></dd>
+
+			<dt style="display: %%GLOBAL_HideRMANo%%">&nbsp;&nbsp; %%LNG_ContactRMANo%%:</dt>
+			<dd style="display: %%GLOBAL_HideRMANo%%"><input name="contact_rma" type="text" class="Textbox Field200" id="contact_rma" value="%%GLOBAL_ContactRMA%%" size="50" /></dd>
+
+			<dt><span class="Required">*</span>&nbsp; %%LNG_ContactQuestion%%:</dt>
+			<dd><textarea name="contact_question" id="contact_question" class="Field300" rows="5" cols="50">%%GLOBAL_ContactQuestion%%</textarea><div id="SearchResults"></div></dd>
+
+			<dt style="display: %%GLOBAL_HideCaptcha%%"><span class="Required">*</span>&nbsp; %%LNG_CaptchaVerification%%:</dt>
+  <dd style="display: %%GLOBAL_HideCaptcha%%">
+					<p class="Warning">%%LNG_CaptchaIntro%%</p>
+					%%GLOBAL_CaptchaImage%%<br />
+					<input style="margin-top:5px; width:105px" type="text" name="captcha" id="captcha" class="Textbox" />
+
+		<p class="Submit">
+			<input type="submit" value="%%LNG_SendForm%%" class="ContactButton" />
+		</p>
+</form>
+
+%%Panel.ContactFormJavaScript%%
+
+%%GLOBAL_ARSPanel%%

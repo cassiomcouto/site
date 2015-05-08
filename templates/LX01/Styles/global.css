@@ -1,0 +1,346 @@
+
+
+
+/* icones */
+.MiniIcoEstrela { background-image:url(../img/mini_icon_estrela.png); background-position:left; background-repeat:no-repeat; padding-left:20px;}
+.MiniIcoPacote { background-image:url(../img/mini_icon_pacote.png); background-position:left; background-repeat:no-repeat; padding-left:23px;}
+.MiniIcoCarrinho { background-image:url(../img/mini_icon_carrinho.png); background-position:left; background-repeat:no-repeat; padding-left:23px;}
+
+.MiniIcoDesconto { background-image:url(../img/mini_icon_desconto.gif); background-position:left; background-repeat:no-repeat; padding-left:23px;}
+.MiniIcoPresente { background-image:url(../img/mini_icon_presente.gif); background-position:left; background-repeat:no-repeat; padding-left:23px;}
+.MiniIcoFrete { background-image:url(../img/mini_icon_frete.gif); background-position:left; background-repeat:no-repeat; padding-left:23px;}
+.MiniIcoAtencao { background-image:url(../img/mini_icon_atencao.gif); background-position:left; background-repeat:no-repeat; padding:30px 30px 30px 40px;}
+.MiniIcoAtencao { font-size:12px; border:1px solid #ccc;}
+.FloatRight { float:right}
+.FloatLeft { float:left}
+
+/* colunas */
+.Content {margin-left:175px;margin-right:175px;  padding-top:10px; } 
+.West { margin-right:0;}
+.Content .Block { margin-top:10px; float:left; width:100%}
+.Content h2 { color:#333;  margin:0; padding:0; font-size:12px; background-color:#ededed; padding:10px;}
+
+.Left{float:left;width:150px; padding:10px; }
+.Right{float:right;width:150px; padding:10px;}
+
+.Left *, .Right * { list-style:none; margin:0; padding:0; }
+
+.Left h2, .Right h2 { background-image:url(../img/LeftH2.gif); width:146px;  text-transform:uppercase; letter-spacing:-0.6px; height:21px; color:#fff; font-size:14px; text-align:center; padding:10px 0}
+.Left .BlockContent, .Right .BlockContent { background-image:url(../img/ColunaBlock.gif); margin-bottom:10px; width:146px; background-position:bottom;} 
+.Left .BlockContent ul, .Right .BlockContent ul { padding:10px 5px 10px 6px;}
+.Left .BlockContent li ul { padding:0; padding:3px 3px 3px 0; margin-bottom:10px; border-bottom:1px solid #fff; }
+.Left .BlockContent li ul li ul, .Left .BlockContent li ul li * { margin:0;}
+
+.Left .BlockContent a { text-decoration:none; color:#333;}
+.Left .BlockContent ul li a {text-decoration:none; color:#0b2c4d; font-weight:bold; font-size:11px;}
+.Left .BlockContent ul li ul a { text-decoration:none; color:#666; font-size:11px;}
+.Left .BlockContent ul li ul li ul a { text-decoration:none; color:#666; font-weight:normal; font-size:11px;}
+
+.Left .BlockContent form { padding:8px; color:#333}
+.Left .BlockContent form .Button { margin-top:10px }
+.InputTexto, .Formulario .FormField, form .Textbox  { background-image:url(../img/input.gif); background-position:top; background-repeat:repeat-x; background-color:#eeeeee; border:1px solid #b0b0b0; padding:3px}
+
+dt, dd { float:left}
+dt { width:30%; margin:2px; text-align:right; font-size:12px; font-weight:bold; color:#333}
+dd { width:50%;margin:2px;} 
+.TitleZ { font-size:16px; color:#333}
+.FormFieldRequired { color:#900; font-size:10px} 
+.ExpressCheckoutBlock .FormField { width:80%} 
+.ExpressFinal { font-family:tahoma;}
+.BotaoemBranco { background:none; border:0; padding:0; background-image:url(../img/botao_full_embranco.gif); height:36px; width:301px; text-align:left; padding-left:25px; font-weight:normal; color:#FFF}
+.ShipperName { font-weight:bold;  font-size:12px;}
+.ShipperPrice { font-style:normal; font-size:14px; color:#06C}
+ 
+.Right #Padd10 { padding:5px }
+.Right #SideCartContents a { color:#0B2C4D}
+.Right #SideCartContents em { font-style:normal; font-size:10px;}
+.Right #SideCartContents .Iten { border-bottom:1px solid #ccc; padding:10px 0 10px 0}
+
+/* listagem dos produtos */
+.ProdutosListagem  { margin:0; padding:0;}
+.ProdutosListagem  .ProductDetails a { font-size:12px; color:#0B2C4D; text-decoration:none; font-weight:bold;}
+.ProdutosListagem li { list-style:none; float:left; color:#484747; width:33%; text-align:center; height:310px;}
+.ProdutosListagem li strike { font-weight:normal; font-size:11px; font-weight:bold; color:#484747; float:left; width:100%}
+.ProdutosListagem li em  { font-style:normal; font-weight:bold; font-size:18px; color:#feb000; float:left; width:100% }
+.ProdutosListagem li em b { color:#ed3006}
+.ProdutosListagem li .Titulo a { color:#484747; text-decoration:none; font-weight:bold}
+.MaisInfo { color:#0B2C4D;}
+.FreteGratis { color:#e7b60a; text-transform:uppercase; font-size:10px;}
+
+.divTabControl li { border:0}
+
+#SidefryTopSellers img, #SidePopularProducts img { text-align:center; max-width:130px}
+
+/* MAIS VENDIDOS LATERAL CATEGORIAS*/
+.MaisvendidosListagem  { margin:0; padding:0;}
+.MaisvendidosListagem  .Produtolist a { font-size:12px; color:#0B2C4D; text-decoration:none; font-weight:bold;}
+.MaisvendidosListagem li { list-style:none; float:left;  color:#484747; text-align:center; height:310px;}
+.MaisvendidosListagem li strike { font-weight:normal; font-size:11px; font-weight:bold; color:#484747; float:left; width:100%}
+.MaisvendidosListagem li em  { font-style:normal; font-weight:bold; font-size:18px; color:#feb000; float:left; width:100% }
+.MaisvendidosListagem li em b { color:#ed3006}
+
+/* MAIS VENDIDOS ABA HOME*/
+.MaisvendidosABAHOME  { margin:0; padding:0;}
+.MaisvendidosABAHOME  .Produtolist a { font-size:12px; color:#0B2C4D; text-decoration:none; font-weight:bold;}
+.MaisvendidosABAHOME li { list-style:none; float:left; color:#484747; width:33%; text-align:center; height:310px;}
+.MaisvendidosABAHOME li strike { font-weight:normal; font-size:11px; font-weight:bold; color:#484747; float:left; width:100%}
+.MaisvendidosABAHOME li em  { font-style:normal; font-weight:bold; font-size:18px; color:#feb000; float:left; width:100% }
+.MaisvendidosABAHOME li em b { color:#ed3006}
+
+
+
+/* listagem de produtos .Right*/
+.divTabs { height:25px; width:auto; }
+.divTabs .ulTabs { height:25px; margin:0; text-align:left; width:100%; float:left; }
+.divTabs .ulTabs li { list-style:none; background:url(../img/tab_bgmenu1.png) no-repeat 0 0; margin-right:0px; cursor:pointer; float:left; font-size:11px; font-weight:bold; height:25px; width:auto; text-transform:uppercase; color:#FFF; text-indent:10px }
+.divTabs .ulTabs li:hover, .divTabs .ulTabs li.on { background:url(../img/tab_bgmenu1_a.png) no-repeat 0 0 }
+.divTabs .ulTabs li span { background:url(../img/tab_bgmenu2.png) no-repeat right 0; display:block; margin-left:0px; padding:5px 10px 6px 5px }
+#product .ulTabs li span { display:block; white-space:nowrap }
+.divTabs .ulTabs li:hover span, .divTabs .ulTabs li.on span { background:url(../img/tab_bgmenu2_a.png) no-repeat right 0; color:#fff; text-decoration:none }
+.divTabArea { border:1px solid #ccc; display:none; overflow:hidden; width:auto; }
+.divTabArea ul { padding:30px; }
+.Produto .divTabArea { padding:30px; }
+* html .divTabArea { margin-top:-2px; overflow:visible; }
+.divTabControl div.on { display:block }
+.divTabArea .ofertas { border:0 none; }
+
+/* NOVOS PRODUTOS HOME*/
+#HomeNewProducts {border:1px solid #ccc; margin-top:20px;}
+#HomeNewProducts h2 
+{background:  url(../img/novosprodutos.png) no-repeat left 1px; margin-top:-25px; margin-bottom:25px; color:#FFF; font-size:11px; font-weight:bold; text-transform:uppercase; padding:5px 15px;margin-left:-1px}
+#HomeNewProducts li {border-bottom:0px}
+
+/* Breadcrumb */
+.Breadcrumb { border-bottom:1px solid #ccc}
+.Breadcrumb ul { margin:0; padding:0; width:100%; float:left;}
+.Breadcrumb li { background-image:url(../img/BreadcrumbLi.png); background-position:left; background-repeat:no-repeat; float:left; list-style:none; font-weight:bold;  padding:10px 10px 10px 20px; font-size:14px; color:#0B2C4D;}
+.Breadcrumb a { font-weight:normal;color:#999; text-decoration:none;}
+
+/* descricao do produto */
+.ProdutoFull { color:#515151;font-size:12px;}
+.ProdutoFull .TituloProd { font-size:18px; color:#0B2C4D; font-weight:bold;}
+.ProdutoFull .valorde { text-decoration:line-through; font-size:14px; color:#F00; }
+.ProdutoFull .valorpor { font-weight:bold;}
+.ProdutoFull .valorpor em, .ProdutoFull .valorparcelas b { font-style:normal; color:#090; font-size:16px;}
+.ProdutoFull .valorpor u { font-weight:normal; color:#515151; text-decoration:none}
+.ProdutoFull .valorparcelas b { font-size:12px;}
+.ProductOptionList { margin:5px 0 15px 0; padding:10px 0;}
+.ProductOptionList .Label { margin-top:10px;font-weight:bold; color:#0B2C4D; font-size:12px;}
+.ProductOptionList li, .ProductOptionList ul { list-style:none; margin:0; padding:0;}
+.DetailRow a { text-decoration:none; color:#333}
+#ProductDetails #ImageScrollPrev,
+#ProductDetails #ImageScrollNext {
+	float: left;
+	background:none;
+	border:none;
+	margin-top:16px;
+	cursor:pointer;
+	display: none;
+}
+.ItenBusca * { text-align:left }
+.ItenBusca h1 { font-size:22px;}
+.ItenBusca a { color:#333; text-decoration:none}
+#FeaturedVideo ul, #VideoSideContainer ul { margin:0; padding:0}
+#FeaturedVideo li, #VideoSideContainer li { list-style:none}
+.VideoSingleTitle { font-size:14px; color:#333; font-weight:bold;}
+#VideoSideContainer a { color:#333; text-decoration:none; font-weight:bold; }
+#VideoSideContainer li { width:24%; text-align:center;}
+
+/*-----------------------------------------------------------------------------------*/
+/* 0. = RODAPE
+/*-----------------------------------------------------------------------------------*/
+.center940 { width:940px; margin:auto }
+.Footer { background:url(../img/bg-footer.png) repeat-x; height:155px; color:#FFF }
+.Footer .FooterContent { height:130px; background-position:left; background-repeat:no-repeat }
+/* menu */
+.MenuFooter { border-top:1px solid #0b2c4d; border-bottom:1px solid #0b2c4d; background: url(../img/Footermenu.png) repeat-x; height:230px;min-height:230px; margin:auto }
+.MenuFooter h6 { font-size:13px; color:#666; font-weight:bold; margin-bottom:5px; margin-top:10px}
+.MenuFooter ul { margin:0; padding:12px; padding-bottom:0px; float:left; clear:both; width:auto; margin:5px; margin-top:10px;}
+.MenuFooter li { list-style:none; float:left; font-size:13px; padding:2px 0px; background: url(../img/li-seta.png) no-repeat 5px 7px;  margin-left:10px;}
+.MenuFooter li:hover { background: url(../img/li-seta.png) no-repeat 10px 7px;}
+.MenuFooter a { color:#252525; text-decoration:none; width:100%; padding:2px; padding-left:20px; float:left }
+/* pagamentos */
+.pagamento { width:100%; margin:auto; color:#fff; font-size:12px; float:left; clear:both }
+.pagamento p.box-left { text-align:left; float:left; width:40%; text-transform:uppercase; padding-top:20px; margin-left:20px}
+.pagamento p.box-right { text-align:right; float:right; width:40%; padding-top:20px; margin-right:20px;}
+/* copyright */
+.copy { width:100%; margin:auto; color:#666; font-size:11px; font-weight:bold }
+.copy p.box-left { text-align:left; float:left; clear:left; width:45%; padding-top:33px ; margin-left:20px}
+.copy p.box-right { text-align:right; float:right; clear:right; width:45%; padding-top:20px; margin-right:20px; }
+.copy p.box-right img { margin:0px; padding:0px; opacity:0.7;filter:alpha(opacity=70)}
+.copy p.box-right img:hover {opacity:0.9; filter:alpha(opacity=90)}
+
+
+.SContent { background-color:#ededed;  padding:20px;border-bottom:3px solid #ccc; border-top:3px solid #ccc;}
+.SContent .Cont {width:530px;}
+
+.BlockLogin , .BlockLoginCreat{ width:243px; height:258px; float:left; margin:10px;}
+.BlockLogin { background-image:url(../img/BlockLogin.gif);}
+.BlockLoginCreat { background-image:url(../img/blockLoginCreat.gif);}
+
+.BlockLogin h1, .BlockLoginCreat h1 { float:left; font-size:14px; color:#333; padding:15px 15px 15px 55px; width:100%}
+
+.Bcont { padding:10px;width:220px; float:left;}
+.Bcont  input { width:100%}
+.ContPadding { width:auto; padding:10px}
+
+#LoginButton { background:none; background-image:url(../img/botao_entrar.gif); margin-top:6px; width:133px; height:39px; border:0;}
+#LoginButton2 { background:none; background-image:url(../img/botao_entrar2.gif); margin-top:6px; width:133px; height:39px; border:0;}
+
+.BlockLogin a , .BlockLoginCreat a { color:#0B2C4D}
+.CreateAccount, .AccountLogin { height:220px; padding:35px; }
+.CreateAccount {
+	float: left;
+	width: 35%;
+	padding-left: 8%;
+}
+
+.AccountLogin {
+	float: right;
+	padding-right: 12%;
+	width: 35%;
+}
+
+.BlockFull h1 { background-image:url(../img/BlockFullHeader.gif); padding:20px; height:16px; font-size:14px; font-weight:bold;}
+.BlockFull { background-image:url(../img/blockFullFooter.gif); background-position:bottom;width:776px; }
+.BlockFull li { list-style:none}
+.SubCategoryList { border:1px dashed #ccc}
+.SubCategoryList ul { margin-top:10px;} 
+.SubCategoryList li a { color:#333; text-decoration:none}
+
+.SortBox { margin-top:-26px; padding:0 20px; font-size:12px;}
+
+
+/*processo da compra*/
+.ProcessoCompra { float:right; padding-top:10px }
+.ProcessoCompra .Iten { text-align:center;  float:left; padding-top:40px; font-size:14px; margin:20px; font-weight:bold;}
+
+.ProcessIcon1On { background-image:url(../img/process_1_on.gif); background-position:center top; background-repeat:no-repeat; color:#06509c}
+.ProcessIcon1Off { background-image:url(../img/process_1_off.gif); background-position:center top; background-repeat:no-repeat; color:#333}
+.ProcessIcon2On { background-image:url(../img/process_2_on.gif); background-position:center top; background-repeat:no-repeat; color:#06509c}
+.ProcessIcon2Off { background-image:url(../img/process_2_off.gif); background-position:center top; background-repeat:no-repeat; color:#333}
+.ProcessIcon3On { background-image:url(../img/process_3_on.gif); background-position:center top; background-repeat:no-repeat; color:#06509c}
+.ProcessIcon3Off { background-image:url(../img/process_3_off.gif); background-position:center top; background-repeat:no-repeat; color:#333}
+.ProcessIconUser { background-image:url(../img/process_user.gif); background-position:center top; background-repeat:no-repeat; color:#333}
+
+
+/* paginacao */
+.CategoryPagination { color:#999; border:1px dashed #ccc; background-color:#f9f9f9}
+.CategoryPagination .PagingList, .CategoryPagination .PagingList li {	list-style: none;	padding: 0;	margin: 0;}
+.CategoryPagination {	padding: 5px;	text-align: center;}
+.CategoryPagination .PagingList li {	display: inline;	padding: 0 5px;}
+.CategoryPagination a { color:#333; text-decoration:none}
+
+/* carrinho */
+/* General Tables */
+table.General,table.CartContents, table.General {	width: 100%;	margin: 10px 0;}
+table.General thead tr th,table.CartContents thead tr th {	padding: 6px 10px;	text-align: left;}
+table.General tbody td,table.CartContents tbody td {	padding: 6px 10px;	vertical-align: top;}
+table.General tbody tr.First td {	border-top: 0;}
+
+/* Cart Contents Table */
+.CartContents {}
+.CartContents thead th{border-bottom: 0; font-size:12px; color:#333; border-bottom:1px solid #ccc}
+.CartContents tbody td {border-bottom: 0;}
+.CartContents a {font-weight: bold; text-decoration:none; color:#0B2C4D;}
+.CartContents em { font-size:14px; font-style:normal; font-weight:bold; color:#007abe}
+.CartContents tbody .SubTotal td {text-align: right;	font-weight: bold;}
+table.General tbody td {  border-bottom:1px solid #ccc}
+.CartItemIndividualPrice { font-size:12px; font-weight:bold; color:#666}
+.SubTotal { font-size:12px;}
+/*.CartThumb img { max-width:100px}*/
+.Alert { text-align:left}
+.Alert b {color:#0B2C4D;}
+.Alert label { font-size:12px;color:#0B2C4D; padding:2px 12px 2px; font-weight:bold; width:130px; text-align:right;}
+.Alert label, .Alert .Textbox { float:left}
+.CartItemTotalPrice, .CartItemIndividualPrice  { width:100px}
+
+.zOrderPay .BlockContent { font-size:12px; color:#333}
+
+/* Express Checkout */
+.ExpressCheckoutBlock .ExpressCheckoutTitle {
+	position: relative;
+	padding: 6px;
+	margin-bottom: 10px;
+}
+
+.ExpressCheckoutBlock h3 a {
+	font-size: 12px;
+}
+
+.ExpressCheckoutBlock {
+	padding-top: 6px;
+}
+
+.ExpressCheckoutBlock .ExpressCheckoutCompletedContent {
+	display: none;
+}
+
+.ExpressCheckoutBlockCompleted .ExpressCheckoutCompletedContent {
+	display: inline;
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+.ExpressCheckoutBlockCollapsed .ExpressCheckoutContent {
+	display: none;
+}
+
+a.ChangeLink {
+	position: absolute;
+	right: 15px;
+}
+
+.ExpressCheckoutBlock a.ChangeLink {
+	display: none;
+}
+
+.ExpressCheckoutBlockCompleted a.ChangeLink {
+	display: inline;
+}
+
+.ExpressCheckoutCompletedContent {
+	position: absolute;
+	left: 250px;
+}
+
+/* Express Checkout */
+.ExpressCheckoutTitle a { color:#FFF}
+.ExpressCheckoutBlock .ExpressCheckoutTitle {
+	background-image:url(../img/express_title_on.gif);
+	color:#FFF;
+	font-size:14px;
+	padding:10px;
+}
+
+.ExpressCheckoutBlockCollapsed .ExpressCheckoutTitle {
+	background-image:url(../img/express_title_off.gif);
+	color:#fff;
+	padding:10px;
+}
+
+.ExpressCheckoutBlockCompleted .ExpressCheckoutCompletedContent {
+	color: #888;
+}
+
+
+
+/* Product Comparisons */
+.ComparisonTable { width: 100%; border-right:1px solid #ededed;}
+.ComparisonTable a { color:#0467c3; text-decoration:none}
+.ComparisonTable td { vertical-align:top; font-size: 11px }
+.CompareFieldName { width:95px; padding:8px 10px 8px 15px; }
+.ComparisonTable td { border-bottom:1px solid #ededed;  border-left:1px solid #ededed;}
+.ComparisonTable thead { background-color:#b9d7f0; color:#1151b2;}
+.ComparisonTable thead  th { padding:10px;}
+.CompareFieldTop { padding:5px; text-align:center; }
+.CompareFieldTop a { text-decoration:none; font-size:10px; }
+.CompareFieldTop a:hover { text-decoration:underline; }
+.CompareLeft { padding:5px 10px 5px 10px; }
+.CompareCenter { text-align:center; padding:5px; }
+.CompareRating { text-align:center; padding-top:8px; vertical-align:middle; }
+.CompareProductOption { margin-left:20px; padding-left:5px; }
+.InfoMessage { padding:10px 0 10px 50px; background-color:#edf7f9;  margin-top:2px; border:1px dotted #bdcbef; color:#12214c; background-image:url(../img/InfoMessage.png); background-position:left; background-repeat:no-repeat}
+.InfoMessage a { font-weight:bold; color:#12214c; }

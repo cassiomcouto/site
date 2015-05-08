@@ -1,0 +1,59 @@
+<div class="CurrentlySoldOut">
+<script type="text/javascript">
+function loadingAjax(obj,msg,float){
+	float = float || 'left';
+	msg = msg || "Carregando...";
+	if (document.getElementById(obj)){
+		document.getElementById(obj).innerHTML = "<div style='float:"+float+";'><font color=\'#000000\' face='Trebuchet MS, Arial' size=2>"+msg+"</font></div>";
+	}
+}
+
+//var conteudo_notifica_produto = "";
+function salvaNotificaoProduto(id){
+		var notifica_nome = document.getElementById("notifica_nome").value;
+		var notifica_email = document.getElementById("notifica_email").value;
+		if (notifica_nome.length < 2 ) { alert("Informe o seu NOME para cadastro."); document.getElementById("notifica_nome").focus(); }
+		else if (notifica_email.length < 5 ) { alert("Informe o E-MAIL para cadastro."); document.getElementById("notifica_email").focus();  }
+		else {
+		loadingAjax("notificao_produto","Aguarde...");
+		$.post('%%GLOBAL_ShopPath%%/remote.php?w=avisar',
+				{ id_produto : id, nome : notifica_nome, email: notifica_email },
+					function(resposta){  
+						if (resposta!=""){
+                        document.getElementById("notificao_produto").innerHTML = resposta;
+						}
+					}
+				);
+		}
+}
+</script>
+
+<b style="font-family: Arial; font-size: 16px; color: rgb(255, 0, 0);">&nbsp;&nbsp;Produto indisponível</b>
+
+
+
+<table class="texto11" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td id="notificao_produto" style="font-family: Arial; font-size: 12px; color: rgb(0, 0, 0);">
+<table border="0" cellpadding="0" cellspacing="5" width="100%">
+
+  <tbody><tr>
+    <td><b>Quero ser avisado quando esse produto retornar!</b></td>
+  </tr>
+  <tr>
+    <td>Nome:&nbsp;<input autocomplete="off" name="notifica_nome" id="notifica_nome" class="campo_texto" size="50" type="text"></td>
+  </tr>
+  <tr>
+    <td>E-mail:&nbsp;<input autocomplete="off" name="notifica_email" id="notifica_email" class="campo_texto" size="50" type="text"></td>
+
+  </tr>
+  <tr>
+    <td><img src="%%GLOBAL_ShopPath%%/modificacoes/bt_cadastrar.png" alt="Cadastrar" title=" Cadastrar " style="cursor: pointer;" onclick="salvaNotificaoProduto(%%GLOBAL_ProductId%%);" border="0" width="140" height="30"></td>
+  </tr>
+</tbody></table></td>
+  </tr>
+
+</tbody>
+</table>
+
+</div>

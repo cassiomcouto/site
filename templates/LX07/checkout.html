@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body>
+	<div id="Container">
+		%%Panel.HeaderClean%%
+		<div id="Wrapper">
+			%%Panel.WrapperBanner%%
+			<div class="Content Widest" id="LayoutColumn1">
+				<div class="Block Moveable Panel">
+					<h2>%%LNG_Checkout%%</h2>
+					<div class="BlockContent">
+						<div class="CreateAccount">
+							<form action="checkout.php?action=choose_billing_address" method="post">
+								<div id="CheckoutGuestForm" style="%%GLOBAL_HideCheckoutGuest%%">
+									<h4>%%LNG_NotAnExistingCustomer%%</h4>
+									<p>%%LNG_CheckoutGuestIntro%%</p>
+									<div class="PL40" style="line-height: 2;">
+										<dl>
+											<dd><label><input name="checkout_type" id="checkout_type_guest" value="guest" type="radio" /> %%LNG_CheckoutAsAGuest%%</label></dd>
+											<dd><label><input name="checkout_type" id="checkout_type_register" value="register" checked="checked" type="radio" /> %%LNG_RegisterAnAccount%%</label></dd>
+										</dl>
+										<p class="Submit" style="margin-top: 4px;">
+											<input type="submit" value="%%LNG_Continue%%" />
+										</p>
+									</div>
+								</div>
+								<div style="%%GLOBAL_HideCheckoutRegistrationRequired%%">
+									<h4>%%LNG_NotAnExistingCustomer%%</h4>
+									<p>%%LNG_CreateAccountIntroTitle%%</p>
+									<div class="PL40">
+										<ul style="margin-left: 0; line-height: 1.4;">
+											<li>%%LNG_CreateAccountIntro1%%</li>
+											<li>%%LNG_CreateAccountIntro2%%</li>
+											<li>%%LNG_CreateAccountIntro3%%</li>
+										</ul>
+									</div>
+									<p class="PL40 Submit" style="margin-top: 4px;">
+										<input type="submit" value="%%LNG_Continue%%" />
+									</p>
+								</div>
+							</form>
+						</div>
+
+						<div class="AccountLogin">
+							<h4>%%LNG_AlreadyHaveAnAccount%%</h4>
+							<p>%%LNG_AlreadyHaveAnAccountIntro%%</p>
+							<form action="checkout.php?action=choose_billing_address" id="LoginForm" method="post">
+								<div class="FormContainer HorizontalFormContainer NarrowFormContainer">
+									<p style="display: %%GLOBAL_HideLoginMessage%%" class="%%GLOBAL_MessageClass%%">
+										%%GLOBAL_LoginMessage%%
+									</p>
+
+									<dl>
+										<dt>%%LNG_EmailAddress%%:</dt>
+										<dd><input type="text" class="Textbox Field150 InitialFocus" name="login_email" id="login_email" /></dd>
+
+										<dt>%%LNG_Password%%:</dt>
+										<dd><input type="password" class="Textbox Field150" name="login_pass" id="login_pass" /></dd>
+									</dl>
+									<p class="Submit">
+										<input id="LoginButton" type="submit" value="%%LNG_Continue%%" style="padding:2px 10px 2px 10px" />
+										<br />
+										<a href="%%GLOBAL_ShopPath%%/login.php?action=reset_password">%%LNG_ForgotYourPassword%%</a>
+									</p>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<br class="Clear" />
+			</div>
+			%%Panel.Footer%%
+		</div>
+        <script LANGUAGE="JavaScript">
+<!--
+function Verifica_CPF(formulario) {
+var CPF = formulario.CPF.value; // Recebe o valor digitado no campo
+
+// Verifica se o campo é nulo
+if (CPF == '') {
+  alert('Este campo é de preenchimento obrigatório!');
+  return false;
+   }
+
+// Aqui começa a checagem do CPF
+var POSICAO, I, SOMA, DV, DV_INFORMADO;
+var DIGITO = new Array(10);
+DV_INFORMADO = CPF.substr(9, 2); // Retira os dois últimos dígitos do número informado
+
+// Desemembra o número do CPF na array DIGITO
+for (I=0; I<=8; I++) {
+  DIGITO[I] = CPF.substr( I, 1);
+}
+
+// Calcula o valor do 10º dígito da verificação
+POSICAO = 10;
+SOMA = 0;
+   for (I=0; I<=8; I++) {
+      SOMA = SOMA + DIGITO[I] * POSICAO;
+      POSICAO = POSICAO - 1;
+   }
+DIGITO[9] = SOMA % 11;
+   if (DIGITO[9] < 2) {
+        DIGITO[9] = 0;
+}
+   else{
+       DIGITO[9] = 11 - DIGITO[9];
+}
+
+// Calcula o valor do 11º dígito da verificação
+POSICAO = 11;
+SOMA = 0;
+   for (I=0; I<=9; I++) {
+      SOMA = SOMA + DIGITO[I] * POSICAO;
+      POSICAO = POSICAO - 1;
+   }
+DIGITO[10] = SOMA % 11;
+   if (DIGITO[10] < 2) {
+        DIGITO[10] = 0;
+   }
+   else {
+        DIGITO[10] = 11 - DIGITO[10];
+   }
+
+// Verifica se os valores dos dígitos verificadores conferem
+DV = DIGITO[9] * 10 + DIGITO[10];
+   if (DV != DV_INFORMADO) {
+      alert('CPF inválido');
+      formulario.CPF.value = '';
+      formulario.CPF.focus();
+      return false;
+   }
+}
+//-->
+</script>
+	</body>
+</html>

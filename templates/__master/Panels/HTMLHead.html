@@ -1,0 +1,225 @@
+<head>
+	%%GLOBAL_OptimizerControlScript%%
+
+	<title>%%Page.WindowTitle%%</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=%%GLOBAL_CharacterSet%%" />
+	<meta name="description" content="%%Page.MetaDescription%%" />
+	<meta name="keywords" content="%%Page.MetaKeywords%%" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<link rel="shortcut icon" href="%%GLOBAL_Favicon%%" />
+	<meta name="rating" content="General" />
+<meta name="revisit-after" content="1 Day" />
+<meta name="robots" content="FOLLOW,INDEX,ALL" />
+<meta name="googlebot" content="INDEX, FOLLOW" />
+<meta name="AUDIENCE" content="all" />
+
+	
+<link href="%%GLOBAL_ShopPath%%/modificacoes/novostilos.css" media="all" type="text/css" rel="stylesheet" />
+
+
+	<script type="text/javascript" src="%%GLOBAL_ShopPath%%/modificacoes/ajax.js"></script>
+	<script type="text/javascript">
+
+	var ajax = new sack();
+	var currentClientID=false;
+	function getClientData()
+	{ 
+
+		var clientId = document.getElementById('FormField_13').value.replace(/[^0-9]/g,'');
+
+		if(clientId.length<=9 && clientId!=currentClientID){
+			currentClientID = clientId
+			ajax.requestFile = '%%GLOBAL_ShopPath%%/modificacoes/getClient.php?getClientId='+clientId;
+			ajax.onCompletion = showClientData;
+			ajax.runAJAX();		
+		}
+		
+
+		
+	}
+
+	
+	function showClientData()
+	{
+		var formObj = document.forms['clientForm'];	
+		eval(ajax.response);
+	}
+
+	
+	
+	function initFormEvents()
+	{
+		document.getElementById('FormField_13').onblur = getClientData;
+		document.getElementById('FormField_6').onblur = validar;
+
+	}
+	
+	function validar() {
+	var obj = document.getElementById('FormField_6');
+	var s = (obj.value).replace(/\D/g,'');
+	var tam=(s).length; // removendo os caracteres não numéricos
+	if (!(tam==11 || tam==14)){ // validando o tamanho
+		alert("'"+s+"' Não é um CPF ou um CNPJ válido!" ); // tamanho inválido
+		obj.value = '';
+		return false;
+	}
+	
+// se for CPF
+	if (tam==11 ){
+		if (!validaCPF(s)){ // chama a função que valida o CPF
+			alert("'"+s+"' Não é um CPF válido!" ); // se quiser mostrar o erro
+			obj.value = '';
+			return false;
+		}
+
+		obj.value=maskCPF(s);	// se validou o CPF mascaramos corretamente
+		return true;
+	}
+	
+// se for CNPJ			
+	if (tam==14){
+		if(!validaCNPJ(s)){ // chama a função que valida o CNPJ
+			alert("'"+s+"' Não é um CNPJ válido!" ); // se quiser mostrar o erro
+			obj.value = '';
+			return false;			
+		}
+		
+		obj.value=maskCNPJ(s);	// se validou o CNPJ mascaramos corretamente
+		return true;
+	}
+}
+
+function validaCPF(s) {
+	var c = s.substr(0,9);
+	var dv = s.substr(9,2);
+	var d1 = 0;
+	for (var i=0; i<9; i++) {
+		d1 += c.charAt(i)*(10-i);
+ 	}
+	if (d1 == 0) return false;
+	d1 = 11 - (d1 % 11);
+	if (d1 > 9) d1 = 0;
+	if (dv.charAt(0) != d1){
+		return false;
+	}
+	d1 *= 2;
+	for (var i = 0; i < 9; i++)	{
+ 		d1 += c.charAt(i)*(11-i);
+	}
+	d1 = 11 - (d1 % 11);
+	if (d1 > 9) d1 = 0;
+	if (dv.charAt(1) != d1){
+		return false;
+	}
+    return true;
+}
+
+function validaCNPJ(CNPJ) {
+	var a = new Array();
+	var b = new Number;
+	var c = [6,5,4,3,2,9,8,7,6,5,4,3,2];
+	for (i=0; i<12; i++){
+		a[i] = CNPJ.charAt(i);
+		b += a[i] * c[i+1];
+	}
+	if ((x = b % 11) < 2) { a[12] = 0 } else { a[12] = 11-x }
+	b = 0;
+	for (y=0; y<13; y++) {
+		b += (a[y] * c[y]);
+	}
+	if ((x = b % 11) < 2) { a[13] = 0; } else { a[13] = 11-x; }
+	if ((CNPJ.charAt(12) != a[12]) || (CNPJ.charAt(13) != a[13])){
+		return false;
+	}
+	return true;
+}
+
+function soNums(e)
+{
+	if (document.all){var evt=event.keyCode;}
+	else{var evt = e.charCode;}
+	if (evt <20 || (evt >47 && evt<58)){return true;}
+	return false;
+}
+
+//	função que mascara o CPF
+function maskCPF(CPF){
+	return CPF.substring(0,3)+"."+CPF.substring(3,6)+"."+CPF.substring(6,9)+"-"+CPF.substring(9,11);
+}
+
+//	função que mascara o CNPJ
+function maskCNPJ(CNPJ){
+	return CNPJ.substring(0,2)+"."+CNPJ.substring(2,5)+"."+CNPJ.substring(5,8)+"/"+CNPJ.substring(8,12)+"-"+CNPJ.substring(12,14);	
+}
+
+window.onload = initFormEvents;
+
+</script>
+
+
+
+	%%GLOBAL_Stylesheets%%
+
+	<!-- Tell the browsers about our RSS feeds -->
+	%%GLOBAL_HeadRSSLinks%%
+
+	<!-- Include visitor tracking code (if any) -->
+	%%GLOBAL_TrackingCode%%
+
+	%%GLOBAL_DesignModeStyleSheet%%
+
+	%%GLOBAL_HeaderImageStyle%%
+	
+
+
+	<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/jquery.js?%%GLOBAL_JSCacheToken%%"></script>
+	<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/menudrop.js?%%GLOBAL_JSCacheToken%%"></script>
+	<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/common.js?%%GLOBAL_JSCacheToken%%"></script>
+	<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/iselector.js?%%GLOBAL_JSCacheToken%%"></script>
+
+	<script type="text/javascript">
+	//<![CDATA[
+	config.ShopPath = '%%GLOBAL_ShopPath%%';
+	config.AppPath = '%%GLOBAL_AppPath%%';
+	var ThumbImageWidth = %%GLOBAL_ProductThumbImageWidth%%;
+	var ThumbImageHeight = %%GLOBAL_ProductThumbImageHeight%%;
+	//]]>
+	</script>
+	%%GLOBAL_AdditionalScriptTags%%
+	%%GLOBAL_QuickSearchJS%%
+	%%GLOBAL_RTLStyles%%
+	<!--modificacoes-->
+<script type="text/javascript">
+var Frete = {
+	Abrir: function(itemId)
+	{
+		$.iModal({
+			type: 'ajax',
+			url: '%%GLOBAL_ShopPath%%/remote.php?w=simularfrete&id='+itemId
+		});
+	}
+};
+var Parcelas = {
+	Abrir: function(itemId)
+	{
+		$.iModal({
+			type: 'ajax',
+			url: '%%GLOBAL_ShopPath%%/remote.php?w=simularparcelas&id='+itemId
+		});
+	}
+};
+var Indique = {
+	Abrir: function(itemId)
+	{
+		$.iModal({
+			type: 'ajax',
+			url: '%%GLOBAL_ShopPath%%/remote.php?w=recomendar&id='+itemId
+		});
+	}
+};
+</script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/modificacoes/popups.js"></script>
+
+</head>

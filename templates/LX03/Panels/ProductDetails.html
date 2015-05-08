@@ -1,0 +1,163 @@
+<script type="text/javascript" src="%%GLOBAL_AppPath%%/javascript/jquery/plugins/jCarousel/jCarousel.js?%%GLOBAL_JSCacheToken%%"></script>
+%%SNIPPET_ProductImageZoomer%%
+
+<script type="text/javascript">//<![CDATA[
+var ThumbURLs = new Array();
+var ProductImageDescriptions = new Array();
+var CurrentProdThumbImage = %%GLOBAL_CurrentProdThumbImage%%;
+var ShowVariationThumb =false;
+var ProductThumbWidth = %%GLOBAL_ProductThumbWidth%%;
+var ProductThumbHeight =  %%GLOBAL_ProductThumbHeight%%;
+var ProductMaxZoomWidth = %%GLOBAL_ProductMaxZoomWidth%%;
+var ProductMaxZoomHeight =  %%GLOBAL_ProductMaxZoomHeight%%;
+var ProductTinyWidth = %%GLOBAL_ProductMaxTinyWidth%%;
+var ProductTinyHeight =  %%GLOBAL_ProductMaxTinyHeight%%;
+
+%%GLOBAL_ProdImageJavascript%%
+
+var ShowImageZoomer = %%GLOBAL_ShowImageZoomer%%;
+
+var productId = %%GLOBAL_ProductId%%;
+//]]></script>
+
+
+%%GLOBAL_ProductDetailFlashMessages%%
+<div class="Block Moveable Panel PrimaryProductDetails" id="ProductDetails">
+  <div class="BlockContent">
+<table class="ProdutoFull" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="17%">
+    <div class="ProductThumb" style="%%GLOBAL_HideProductThumb%%">
+			%%GLOBAL_LightBoxImageJavascript%%
+			%%SNIPPET_ProductThumbImage%%
+            <br /><center>
+            <div style="font-size:10px">Passe o mouse na imagem para zoom</div></center><br />
+
+			<div class="ImageCarouselBox" style="margin:0 auto; %%GLOBAL_HideImageCarousel%%">
+				<a id="ImageScrollPrev" class="prev" href="#"><img src="%%GLOBAL_IMG_PATH%%/LeftArrow.png" alt="" width="20" height="20" /></a>
+
+				<div class="ProductTinyImageList">
+					<ul>
+						%%SNIPPET_ProductTinyImages%%
+					</ul>
+				</div>
+
+				<a id="ImageScrollNext" class="next" href="#"><img src="%%GLOBAL_IMG_PATH%%/RightArrow.png" alt="" width="20" height="20" /></a>
+			</div>
+			<br />
+		</div><br /><br />
+    </td>
+    <td width="83%">
+    
+    	%%GLOBAL_ProductNameOptimizerScriptTag%%
+		<div class="TituloProd">%%GLOBAL_ProductName%%</div>
+		%%GLOBAL_ProductNameOptimizerNoScriptTag%%
+    
+
+    	Avalia&ccedil;&atilde;o dos clientes:<img width="64" height="12" src="%%GLOBAL_IMG_PATH%%/IcoRating%%GLOBAL_Rating%%.gif" alt="" />
+						<span style="display:%%GLOBAL_HideReviewLink%%">(
+							<a href="#reviews" onclick="%%GLOBAL_ReviewLinkOnClick%%">
+								%%GLOBAL_ReviewLinkText%%
+							</a>
+						)</span><br /><br />
+                        
+        <div class="valorde"  style="display: %%GLOBAL_HideRRP%%">%%LNG_RRP%%:%%GLOBAL_RetailPrice%%</div>
+    
+		<div class="valorpor" style="%%GLOBAL_HidePrice%%">%%GLOBAL_PriceLabel%%:<em class="ProductPrice VariationProductPrice">%%GLOBAL_ProductPrice%%</em><br />
+						<u>%%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%</u><br /><br />
+                        </div>
+        
+        <div class="valorparcelas" style="%%GLOBAL_Orcamento%%">%%GLOBAL_DescParcelas%%
+<a href="#" onClick="Frete.Abrir(%%GLOBAL_ProductId%%);"><img src="%%GLOBAL_TPL_PATH%%/img/frete.png" border="0" style="margin-bottom:5px;"></a><br />
+                        <a href="#" onClick="Indique.Abrir(%%GLOBAL_ProductId%%);"><img src="%%GLOBAL_TPL_PATH%%/img/indicar.png" border="0" style="margin-bottom:5px;"></a><br />
+%%Panel.SideProductAddToWishList%%<br/>
+<!-- Lockerz Share BEGIN -->
+<a class="a2a_dd" href="http://www.addtoany.com/share_save"><img src="%%GLOBAL_TPL_PATH%%/img/compartilhe.png" alt="Compartilhe"/></a>
+<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+<!-- Lockerz Share END -->
+        %%SNIPPET_ProductAddToCart%%
+
+        </div>
+
+        <br class="Clear" /><br />
+
+        
+        %%GLOBAL_ParcelasZurox%%
+        
+    </td>
+    <td width="83%" align="left"><iframe frameborder="0" marginheight="0" marginwidth="5" src="%%GLOBAL_ShopPath%%/remote.php?w=simularparcelas&id=%%GLOBAL_ProductId%%" width="420" height="350">
+</iframe></td>
+  </tr>
+</table>
+<br /><br />
+<div class="Clear"></div>
+		
+<div id="divTC" class="divTabControl">
+            <div class="divTabs">
+            <ul class="ulTabs">
+                            <li id='li2'  >
+                                <span>Descri&ccedil;ao do Produto</span>
+                            </li>
+                            <!--<li id='li3'  >
+                                <span id="cfForm:L7:1:L7L2">Formas de Pagamento</span>
+                            </li>-->
+                            <li id='li4'  >
+                                <span>Coment&aacute;rios de Clientes</span>
+                            </li>
+                            
+                             <li id='li6' style=" display:%%GLOBAL_MostraVideo%%"  >
+                                <span >Video do Produto</span>
+                            </li>
+			</ul>
+            </div>
+			
+                <div class="divTabArea" id='div2'>
+                   	 	%%Panel.ProductDescription%%
+                        
+                        %%Panel.ProductWarranty%%
+                </div>
+                <div class="divTabArea" id='div3'>
+                  <ul class="ProdutosListagem">
+                   		
+                  </ul>
+                </div>
+                <div class="divTabArea" id='div4'>
+                      %%Panel.ProductReviews%%
+          
+                </div>
+                
+                 <div class="divTabArea" id='div6'>
+                     %%Panel.ProductVideos%%
+          
+                </div>
+    </div>
+        <script type="text/javascript">tabControl(document.getElementById('divTC'));</script>      
+		
+                        
+	
+    <!--
+    %%LNG_Vendor%%: %%GLOBAL_VendorName%%<br />
+    
+    %%LNG_Brand%%: <a href="%%GLOBAL_BrandLink%%">%%GLOBAL_BrandName%%</a><br />
+    
+    %%LNG_Condition%%: %%GLOBAL_ProductCondition%%<br />
+    
+    %%LNG_Weight%%: %%GLOBAL_ProductWeight%%<br />
+    
+    
+    
+    %%LNG_Availability%%:%%GLOBAL_Availability%%<br />
+    
+    %%LNG_Shipping%%: %%GLOBAL_ShippingPrice%%<br />
+    
+    %%LNG_CurrentStock%%: %%GLOBAL_InventoryList%%<br />
+    
+    %%LNG_GiftWrapping%%: %%GLOBAL_GiftWrappingAvailable%%<br />
+    
+    -->
+    
+
+		<br class="Clear" />
+		<hr />
+  </div>
+</div>

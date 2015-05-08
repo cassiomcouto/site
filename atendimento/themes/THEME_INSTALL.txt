@@ -1,0 +1,16 @@
+Creating Themes:
+
+1. Copy one of the theme folders and rename it to your new theme name.
+2. Change the style.css file to reflect your own theme.
+3. Save.
+4. Go to your PHP Live! setup area and to your Themes section.
+5. You will see your new theme!
+5. Done!
+
+---------------------------------------------------------
+NOTE: Example Adobe PSD file of the logo: phplive/themes/default/images/logo_example.psd
+
+NOTE: We recommend you NOT modify the original themes for they may be updated.  Please make
+a copy of the theme to do any type of modifications.
+---------------------------------------------------------
+Thank you......  We too thank You!
