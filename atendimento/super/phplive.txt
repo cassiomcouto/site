@@ -1,0 +1,608 @@
+-- 
+-- Database: `phplive`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chat_admin`
+-- 
+
+DROP TABLE IF EXISTS chat_admin;
+CREATE TABLE chat_admin (
+  userID int(10) unsigned NOT NULL auto_increment,
+  login varchar(15) NOT NULL default '',
+  `password` varchar(32) NOT NULL default '',
+  `name` varchar(50) NOT NULL default '',
+  email varchar(150) NOT NULL default '',
+  available_status tinyint(1) NOT NULL default '0',
+  last_active_time int(10) unsigned NOT NULL default '0',
+  utrigger tinyint(1) NOT NULL default '1',
+  console_close_min mediumint(3) unsigned NOT NULL default '10',
+  session_sid int(10) unsigned NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  aspID int(10) unsigned NOT NULL default '1',
+  signal tinyint(1) NOT NULL default '0',
+  rateme tinyint(1) NOT NULL default '0',
+  rate_sum int(10) unsigned NOT NULL default '0',
+  rate_total int(10) unsigned NOT NULL default '0',
+  rate_ave tinyint(2) NOT NULL default '0',
+  op2op tinyint(4) NOT NULL default '1',
+  console_refresh mediumint(9) NOT NULL default '10',
+  pic varchar(25) NOT NULL default '',
+  theme varchar(25) NOT NULL default '',
+  PRIMARY KEY  (userID),
+  KEY created (created),
+  KEY aspID (aspID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chat_adminrate`
+-- 
+
+DROP TABLE IF EXISTS chat_adminrate;
+CREATE TABLE chat_adminrate (
+  userID int(10) unsigned NOT NULL default '0',
+  sessionID int(10) unsigned NOT NULL default '0',
+  rating int(10) unsigned NOT NULL default '0',
+  deptID int(10) unsigned NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  aspID int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (sessionID),
+  KEY userID (userID),
+  KEY deptID (deptID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chat_adminstatus`
+-- 
+
+DROP TABLE IF EXISTS chat_adminstatus;
+CREATE TABLE chat_adminstatus (
+  logID int(10) unsigned NOT NULL auto_increment,
+  userID int(10) unsigned NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  `status` tinyint(2) unsigned NOT NULL default '0',
+  PRIMARY KEY  (logID),
+  KEY userID (userID),
+  KEY created (created)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chat_asp`
+-- 
+
+DROP TABLE IF EXISTS chat_asp;
+CREATE TABLE chat_asp (
+  aspID int(10) unsigned NOT NULL auto_increment,
+  login varchar(25) NOT NULL default '',
+  `password` varchar(15) NOT NULL default '',
+  company varchar(50) NOT NULL default '',
+  contact_name varchar(50) NOT NULL default '',
+  contact_email varchar(160) NOT NULL default '',
+  max_dept mediumint(3) NOT NULL default '0',
+  max_users mediumint(3) NOT NULL default '0',
+  footprints tinyint(1) NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  last_login int(10) unsigned NOT NULL default '0',
+  active_status tinyint(1) NOT NULL default '0',
+  initiate_chat tinyint(1) NOT NULL default '0',
+  admin_polling_type tinyint(1) NOT NULL default '0',
+  knowledgebase tinyint(1) NOT NULL default '1',
+  trans_message varchar(255) NOT NULL default '',
+  trans_email text NOT NULL,
+  PRIMARY KEY  (aspID),
+  KEY created (created),
+  KEY max_dept (max_dept),
+  KEY max_users (max_users),
+  KEY active_status (active_status)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatcanned`
+-- 
+
+DROP TABLE IF EXISTS chatcanned;
+CREATE TABLE chatcanned (
+  cannedID int(10) unsigned NOT NULL auto_increment,
+  userID int(10) unsigned NOT NULL default '0',
+  deptID int(10) unsigned NOT NULL default '0',
+  `type` char(1) NOT NULL default '',
+  `name` varchar(20) NOT NULL default '',
+  message mediumtext NOT NULL,
+  PRIMARY KEY  (cannedID),
+  KEY userID (userID),
+  KEY `type` (`type`),
+  KEY deptID (deptID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatclicks`
+-- 
+
+DROP TABLE IF EXISTS chatclicks;
+CREATE TABLE chatclicks (
+  trackID int(10) unsigned NOT NULL default '0',
+  statdate int(10) unsigned NOT NULL default '0',
+  aspID int(10) unsigned NOT NULL default '0',
+  clicks int(10) unsigned NOT NULL default '0',
+  KEY aspID (aspID),
+  KEY trackID (trackID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatclicktracking`
+-- 
+
+DROP TABLE IF EXISTS chatclicktracking;
+CREATE TABLE chatclicktracking (
+  trackID int(10) unsigned NOT NULL auto_increment,
+  unique_key tinyint(2) NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  aspID int(10) unsigned NOT NULL default '0',
+  color varchar(7) NOT NULL default '',
+  `name` varchar(50) NOT NULL default '',
+  landing_url varchar(200) NOT NULL default '',
+  PRIMARY KEY  (trackID),
+  KEY aspID (aspID),
+  KEY unique_key (unique_key)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatdepartments`
+-- 
+
+DROP TABLE IF EXISTS chatdepartments;
+CREATE TABLE chatdepartments (
+  deptID int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(30) NOT NULL default '',
+  visible tinyint(1) NOT NULL default '1',
+  transcript_save tinyint(1) NOT NULL default '0',
+  transcript_share tinyint(1) NOT NULL default '0',
+  transcript_expire_string varchar(10) NOT NULL default '',
+  transcript_expire int(10) NOT NULL default '0',
+  show_que tinyint(1) NOT NULL default '0',
+  email varchar(150) NOT NULL default '',
+  aspID int(10) unsigned NOT NULL default '1',
+  initiate_chat tinyint(1) NOT NULL default '0',
+  email_trans tinyint(1) NOT NULL default '1',
+  status_image_offline varchar(20) NOT NULL default '',
+  status_image_online varchar(20) NOT NULL default '',
+  status_image_away varchar(20) NOT NULL default '',
+  message mediumtext NOT NULL,
+  away_message mediumtext NOT NULL,
+  greeting text NOT NULL,
+  PRIMARY KEY  (deptID),
+  KEY aspID (aspID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatfootprints`
+-- 
+
+DROP TABLE IF EXISTS chatfootprints;
+CREATE TABLE chatfootprints (
+  printID int(10) unsigned NOT NULL auto_increment,
+  ip varchar(20) NOT NULL default '',
+  created int(10) unsigned NOT NULL default '0',
+  url varchar(255) NOT NULL default '',
+  aspID int(10) unsigned NOT NULL default '1',
+  PRIMARY KEY  (printID),
+  KEY ip (ip),
+  KEY created (created),
+  KEY aspID (aspID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatfootprintstats`
+-- 
+
+DROP TABLE IF EXISTS chatfootprintstats;
+CREATE TABLE chatfootprintstats (
+  aspID int(10) unsigned NOT NULL default '0',
+  statdate int(10) unsigned NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  pageviews int(10) unsigned NOT NULL default '0',
+  uniquevisits int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (aspID,statdate)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatfootprintsunique`
+-- 
+
+DROP TABLE IF EXISTS chatfootprintsunique;
+CREATE TABLE chatfootprintsunique (
+  ip varchar(20) NOT NULL default '',
+  created int(10) unsigned NOT NULL default '0',
+  updated int(10) unsigned NOT NULL default '0',
+  url varchar(255) NOT NULL default '',
+  aspID int(10) unsigned NOT NULL default '1',
+  deptID int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (ip,aspID),
+  KEY deptID (deptID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatfootprinturlstats`
+-- 
+
+DROP TABLE IF EXISTS chatfootprinturlstats;
+CREATE TABLE chatfootprinturlstats (
+  statID int(10) unsigned NOT NULL auto_increment,
+  aspID int(10) unsigned NOT NULL default '0',
+  statdate int(10) unsigned NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  url char(255) NOT NULL default '',
+  clicks int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (statID),
+  KEY aspID (aspID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatkbcats`
+-- 
+
+DROP TABLE IF EXISTS chatkbcats;
+CREATE TABLE chatkbcats (
+  catID int(10) unsigned NOT NULL auto_increment,
+  aspID int(10) unsigned NOT NULL default '0',
+  deptID int(10) unsigned NOT NULL default '0',
+  catID_parent int(10) unsigned NOT NULL default '0',
+  display_order mediumint(3) unsigned NOT NULL default '1',
+  `name` char(255) NOT NULL default '',
+  PRIMARY KEY  (catID),
+  KEY aspID (aspID),
+  KEY deptID (deptID),
+  KEY catID_parent (catID_parent)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatkbquestions`
+-- 
+
+DROP TABLE IF EXISTS chatkbquestions;
+CREATE TABLE chatkbquestions (
+  questID int(10) unsigned NOT NULL auto_increment,
+  aspID int(10) unsigned NOT NULL default '0',
+  catID int(10) unsigned NOT NULL default '0',
+  deptID int(10) unsigned NOT NULL default '0',
+  points int(10) NOT NULL default '0',
+  clicks int(10) unsigned NOT NULL default '0',
+  question varchar(255) NOT NULL default '',
+  answer text NOT NULL,
+  PRIMARY KEY  (questID),
+  KEY points (points),
+  KEY deptID (deptID),
+  KEY aspID (aspID),
+  KEY catID (catID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatkbratings`
+-- 
+
+DROP TABLE IF EXISTS chatkbratings;
+CREATE TABLE chatkbratings (
+  aspID int(10) unsigned NOT NULL default '0',
+  questID int(10) unsigned NOT NULL default '0',
+  catID int(10) unsigned NOT NULL default '0',
+  rating tinyint(1) NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  ip char(25) NOT NULL default '',
+  PRIMARY KEY  (questID,ip)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatkbsearchterms`
+-- 
+
+DROP TABLE IF EXISTS chatkbsearchterms;
+CREATE TABLE chatkbsearchterms (
+  searchID int(10) unsigned NOT NULL auto_increment,
+  aspID int(10) unsigned NOT NULL default '0',
+  counter int(10) unsigned NOT NULL default '0',
+  searchterm varchar(255) NOT NULL default '',
+  correction varchar(255) NOT NULL default '',
+  related varchar(255) NOT NULL default '',
+  PRIMARY KEY  (searchID),
+  KEY aspID (aspID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatrefer`
+-- 
+
+DROP TABLE IF EXISTS chatrefer;
+CREATE TABLE chatrefer (
+  aspID int(10) unsigned NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  trackID int(10) unsigned NOT NULL default '0',
+  ip char(20) NOT NULL default '',
+  refer_url char(255) NOT NULL default '',
+  PRIMARY KEY  (aspID,ip),
+  KEY created (created),
+  KEY trackID (trackID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatrequestlogs`
+-- 
+
+DROP TABLE IF EXISTS chatrequestlogs;
+CREATE TABLE chatrequestlogs (
+  chat_session int(10) NOT NULL default '0',
+  userID int(10) unsigned NOT NULL default '0',
+  deptID int(10) NOT NULL default '0',
+  surveyID int(10) unsigned NOT NULL default '0',
+  ip char(20) NOT NULL default '',
+  hostname char(150) NOT NULL default '',
+  display_resolution char(20) NOT NULL default '',
+  browser_os tinytext NOT NULL,
+  created int(10) unsigned NOT NULL default '0',
+  `status` tinyint(1) NOT NULL default '0',
+  url char(255) NOT NULL default '',
+  aspID int(10) unsigned NOT NULL default '1',
+  KEY userID (userID),
+  KEY created (created),
+  KEY aspID (aspID),
+  KEY chat_session (chat_session),
+  KEY `status` (`status`),
+  KEY deptID (deptID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatrequests`
+-- 
+
+DROP TABLE IF EXISTS chatrequests;
+CREATE TABLE chatrequests (
+  requestID int(10) unsigned NOT NULL auto_increment,
+  userID int(10) NOT NULL default '0',
+  deptID int(10) NOT NULL default '0',
+  aspID int(10) unsigned NOT NULL default '0',
+  from_screen_name varchar(50) NOT NULL default '',
+  sessionID int(10) unsigned NOT NULL default '0',
+  surveyID int(10) unsigned NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  `status` tinyint(1) NOT NULL default '1',
+  tstatus tinyint(2) unsigned NOT NULL default '0',
+  tflag tinyint(1) NOT NULL default '0',
+  ip_address varchar(20) NOT NULL default '',
+  browser_type tinytext NOT NULL,
+  display_resolution varchar(20) NOT NULL default '',
+  visitor_time varchar(30) NOT NULL default '',
+  email varchar(150) NOT NULL default '',
+  url varchar(255) NOT NULL default '',
+  question text NOT NULL,
+  PRIMARY KEY  (requestID),
+  KEY sessionID (sessionID),
+  KEY deptID (deptID),
+  KEY aspID (aspID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatsessionlist`
+-- 
+
+DROP TABLE IF EXISTS chatsessionlist;
+CREATE TABLE chatsessionlist (
+  sessionID int(10) unsigned NOT NULL default '0',
+  screen_name char(50) NOT NULL default '',
+  updated int(10) unsigned NOT NULL default '0',
+  KEY sessionID (sessionID),
+  KEY userID (screen_name)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatsessions`
+-- 
+
+DROP TABLE IF EXISTS chatsessions;
+CREATE TABLE chatsessions (
+  sessionID int(10) unsigned NOT NULL default '0',
+  screen_name char(50) NOT NULL default '',
+  created int(10) unsigned NOT NULL default '0',
+  initiate char(15) NOT NULL default '',
+  PRIMARY KEY  (sessionID),
+  KEY userID (screen_name)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatsp`
+-- 
+
+DROP TABLE IF EXISTS chatsp;
+CREATE TABLE chatsp (
+  spID int(10) unsigned NOT NULL auto_increment,
+  aspID int(10) unsigned NOT NULL default '0',
+  email varchar(160) NOT NULL default '',
+  enotify tinyint(1) NOT NULL default '0',
+  `name` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (spID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatspamips`
+-- 
+
+DROP TABLE IF EXISTS chatspamips;
+CREATE TABLE chatspamips (
+  aspID int(10) unsigned NOT NULL default '0',
+  ip varchar(20) NOT NULL default '',
+  created int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (aspID,ip)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatspfootprints`
+-- 
+
+DROP TABLE IF EXISTS chatspfootprints;
+CREATE TABLE chatspfootprints (
+  spID int(10) unsigned NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  aspID int(10) unsigned NOT NULL default '0',
+  url varchar(255) NOT NULL default '',
+  KEY spID (spID),
+  KEY created (created),
+  KEY aspID (aspID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatsprefer`
+-- 
+
+DROP TABLE IF EXISTS chatsprefer;
+CREATE TABLE chatsprefer (
+  spID int(10) unsigned NOT NULL auto_increment,
+  aspID int(10) unsigned NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  trackID int(10) unsigned NOT NULL default '0',
+  chat_session int(10) unsigned NOT NULL default '0',
+  numfootprints int(10) unsigned NOT NULL default '0',
+  ip varchar(20) NOT NULL default '',
+  refer_url varchar(255) NOT NULL default '',
+  PRIMARY KEY  (spID),
+  KEY aspID (aspID),
+  KEY created (created)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatsurveylogs`
+-- 
+
+DROP TABLE IF EXISTS chatsurveylogs;
+CREATE TABLE chatsurveylogs (
+  aspID int(10) unsigned NOT NULL default '0',
+  surveyID int(10) unsigned NOT NULL default '0',
+  rejected tinyint(1) NOT NULL default '0',
+  s_c1 int(10) unsigned NOT NULL default '0',
+  s_c2 int(10) unsigned NOT NULL default '0',
+  s_c3 int(10) unsigned NOT NULL default '0',
+  s_c4 int(10) unsigned NOT NULL default '0',
+  s_c5 int(10) unsigned NOT NULL default '0',
+  created int(10) unsigned NOT NULL default '0',
+  ip varchar(20) NOT NULL default '',
+  q_open text NOT NULL,
+  PRIMARY KEY  (ip,aspID,surveyID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatsurveys`
+-- 
+
+DROP TABLE IF EXISTS chatsurveys;
+CREATE TABLE chatsurveys (
+  surveyID int(10) unsigned NOT NULL auto_increment,
+  aspID int(10) unsigned NOT NULL default '0',
+  deptID int(10) unsigned NOT NULL default '0',
+  isactive tinyint(1) unsigned NOT NULL default '0',
+  created int(10) NOT NULL default '0',
+  s_totaltaken int(10) unsigned NOT NULL default '0',
+  s_c1 int(10) unsigned NOT NULL default '0',
+  s_c2 int(10) unsigned NOT NULL default '0',
+  s_c3 int(10) unsigned NOT NULL default '0',
+  s_c4 int(10) unsigned NOT NULL default '0',
+  s_c5 int(10) unsigned NOT NULL default '0',
+  `name` varchar(60) NOT NULL default '',
+  survey_data text NOT NULL,
+  PRIMARY KEY  (surveyID),
+  UNIQUE KEY `name` (`name`),
+  KEY aspID (aspID),
+  KEY deptID (deptID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chattranscripts`
+-- 
+
+DROP TABLE IF EXISTS chattranscripts;
+CREATE TABLE chattranscripts (
+  chat_session varchar(20) NOT NULL default '',
+  userID int(10) unsigned NOT NULL default '0',
+  from_screen_name varchar(50) NOT NULL default '',
+  email varchar(150) NOT NULL default '',
+  created int(10) unsigned NOT NULL default '0',
+  deptID int(10) NOT NULL default '0',
+  plain text NOT NULL,
+  formatted text NOT NULL,
+  aspID int(10) unsigned NOT NULL default '1',
+  PRIMARY KEY  (chat_session),
+  KEY deptID (deptID),
+  KEY userID (userID),
+  KEY aspID (aspID)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `chatuserdeptlist`
+-- 
+
+DROP TABLE IF EXISTS chatuserdeptlist;
+CREATE TABLE chatuserdeptlist (
+  userID int(10) unsigned NOT NULL default '0',
+  deptID int(10) unsigned NOT NULL default '0',
+  ordernum mediumint(3) unsigned NOT NULL default '1',
+  last_active int(10) unsigned NOT NULL default '0',
+  KEY userID (userID),
+  KEY deptID (deptID),
+  KEY ordernum (ordernum),
+  KEY last_active_time (last_active),
+  KEY last_active (last_active)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

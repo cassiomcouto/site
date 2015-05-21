@@ -1,0 +1,20 @@
+<div id="productRule%%GLOBAL_ProductId%%" class="prodRules">
+	%%LNG_ForThisProduct1%%
+	<a href="#" onclick="ShowProductSelector('productRuleName%%GLOBAL_ProductId%%', 'productRuleValue%%GLOBAL_ProductId%%', 'productRuleDiscount%%GLOBAL_ProductId%%'); return false;" id="productRuleName%%GLOBAL_ProductId%%">%%LNG_ForThisProduct2%% (%%GLOBAL_SelectedItemName%%)</a>
+
+	<input class="prodRulesProductId" type="hidden" id="productRuleValue%%GLOBAL_ProductId%%" value="%%GLOBAL_CatOrProdId%%" onchange="remapHiddenDiscounts('product', %%GLOBAL_ProductId%%);" />
+	%%LNG_CustomersReceiveA%%
+
+	<span id="productDiscountRulesAmountPrefix%%GLOBAL_ProductId%%">%%GLOBAL_AmountPrefix%%</span>
+	<input class="prodRulesDiscount Field50" id="productRuleDiscount%%GLOBAL_ProductId%%" type="text" value="%%GLOBAL_DiscountAmount%%" class="Field50" style="width:30px" onchange="remapHiddenDiscounts('product', %%GLOBAL_ProductId%%);" />
+	<span id="productDiscountRulesAmountPostfix%%GLOBAL_ProductId%%">%%GLOBAL_AmountPostfix%%</span>
+
+	<select id="productDiscountMethod%%GLOBAL_ProductId%%" class="Field120" onchange="ToggleDiscountRateValueType(%%GLOBAL_ProductId%%, 'product');">
+		<option value="price" %%GLOBAL_DiscountMethodPrice%%>%%LNG_PriceDiscount%%</option>
+		<option value="percent" %%GLOBAL_DiscountMethodPercent%%>%%LNG_PercentageDiscount%%</option>
+		<option value="fixed" %%GLOBAL_DiscountMethodFixed%%>%%LNG_FixedPrice%%</option>
+	</select>
+
+	<img title="%%LNG_AddAnotherProdDiscount%%" style="cursor:pointer" src="images/addicon.gif" width="16" height="16" onclick="addDiscountRule('product')" />
+	<img title="%%LNG_RemoveThisProdDiscount%%" style="cursor:pointer" src="images/delicon.gif" width="16" height="16" onclick="removeDiscountRule('product', %%GLOBAL_ProductId%%)" />
+</div>

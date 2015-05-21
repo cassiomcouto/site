@@ -1,0 +1,5 @@
+1 - ponha o modulo em modules/checkout
+2 - acesse o admin da loja  ative e configure o mesmo em formas de pagamento
+3 - no site do paypal acesse sua conta e em Minha Conta > Historico de Transacoes > Historico de NIP, e ative o NIP e ponha a url de notificação Baseada em http://www.seusite.com.br/modules/checkout/paypalbrasil/retorno.php   
+
+Em seguida Salve.

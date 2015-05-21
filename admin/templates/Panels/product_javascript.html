@@ -1,0 +1,193 @@
+<script type="text/javascript" src="../javascript/jquery.growinguploader.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="../javascript/jquery/plugins/ajax.file.upload.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="script/multiuploaddialog.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript">//<![CDATA[
+var shop = { config: { } };
+
+shop.config.DiscountRulesEnabled = '%%GLOBAL_DiscountRulesEnabled%%';
+shop.config.NoCategoriesJS = '%%GLOBAL_NoCategoriesJS%%';
+shop.config.IsProdRelatedAuto = '%%GLOBAL_IsProdRelatedAuto%%';
+shop.config.CurrencyTokenLeft = '%%GLOBAL_CurrencyTokenLeft%%';
+shop.config.CurrencyTokenRight = '%%GLOBAL_CurrencyTokenRight%%';
+shop.config.AppPath = '%%GLOBAL_AppPath%%';
+shop.config.sessionid = '%%GLOBAL_sessionid%%';
+shop.config.maxUploadSize = '%%GLOBAL_maxUploadSize%%';
+
+lang.DiscountRulesNotEnabledWarning = '%%LNG_JS_DiscountRulesNotEnabledWarning%%';
+lang.DiscountRulesVariationWarning = '%%LNG_JS_DiscountRulesVariationWarning%%';
+lang.PleaseWaitRelated = '%%LNG_JS_PleaseWaitRelated%%';
+lang.NoProdsInCat = '%%LNG_JS_NoProdsInCat%%';
+lang.PleaseChooseAProduct = '%%LNG_JS_PleaseChooseAProduct%%';
+lang.ProdAlreadyInRelatedList = '%%LNG_JS_ProdAlreadyInRelatedList%%';
+lang.MoreImages = '%%LNG_JS_MoreImages%%';
+lang.LessImages = '%%LNG_JS_LessImages%%';
+lang.EnterProductFieldName = '%%LNG_JS_EnterProductFieldName%%';
+lang.EnterProductFieldFileType = '%%LNG_JS_EnterProductFieldFileType%%';
+lang.EnterProductFieldFileSize = '%%LNG_JS_EnterProductFieldFileSize%%';
+lang.EnterValidProductFieldFileSize = '%%LNG_JS_EnterValidProductFieldFileSize%%';
+lang.DiscountRulesQuantityMinRequired = '%%LNG_JS_DiscountRulesQuantityMinRequired%%';
+lang.DiscountRulesQuantityMinInvalid = '%%LNG_JS_DiscountRulesQuantityMinInvalid%%';
+lang.DiscountRulesQuantityMaxRequired = '%%LNG_JS_DiscountRulesQuantityMaxRequired%%';
+lang.DiscountRulesQuantityMaxInvalid = '%%LNG_JS_DiscountRulesQuantityMaxInvalid%%';
+lang.DiscountRulesTypeRequired = '%%LNG_JS_DiscountRulesTypeRequired%%';
+lang.DiscountRulesTypeInvalid = '%%LNG_JS_DiscountRulesTypeInvalid%%';
+lang.DiscountRulesAmountRequired = '%%LNG_JS_DiscountRulesAmountRequired%%';
+lang.DiscountRulesAmountInvalid = '%%LNG_JS_DiscountRulesAmountInvalid%%';
+lang.DiscountRulesAmountPriceInvalid = '%%LNG_JS_DiscountRulesAmountPriceInvalid%%';
+lang.DiscountRulesAmountPercentInvalid = '%%LNG_JS_DiscountRulesAmountPercentInvalid%%';
+lang.DiscountRulesAmountPercentIsFloat = '%%LNG_JS_DiscountRulesAmountPercentIsFloat%%';
+lang.DiscountRulesAmountFixedInvalid = '%%LNG_JS_DiscountRulesAmountFixedInvalid%%';
+lang.DiscountRulesQuantityMinHigher = '%%LNG_JS_DiscountRulesQuantityMinHigher%%';
+lang.DiscountRulesQuantityBothAstrix = '%%LNG_JS_DiscountRulesQuantityBothAstrix%%';
+lang.DiscountRulesQuantityMinPrevMaxAstrix = '%%LNG_JS_DiscountRulesQuantityMinPrevMaxAstrix%%';
+lang.DiscountRulesQuantityMinOverlap = '%%LNG_JS_DiscountRulesQuantityMinOverlap%%';
+lang.DiscountRulesQuantityMaxOverlap = '%%LNG_JS_DiscountRulesQuantityMaxOverlap%%';
+lang.EnterProdName = '%%LNG_JS_EnterProdName%%';
+lang.MustCreateCategoryFirst = '%%LNG_JS_MustCreateCategoryFirst%%';
+lang.ChooseCategory = '%%LNG_JS_ChooseCategory%%';
+lang.EnterPrice = '%%LNG_JS_EnterPrice%%';
+lang.EnterCostPrice = '%%LNG_JS_EnterCostPrice%%';
+lang.EnterRetailPrice = '%%LNG_JS_EnterRetailPrice%%';
+lang.EnterSalePrice = '%%LNG_JS_EnterSalePrice%%';
+lang.ChooseValidImage = '%%LNG_JS_ChooseValidImage%%';
+lang.EnterWeight = '%%LNG_JS_EnterWeight%%';
+lang.EnterWidth = '%%LNG_JS_EnterWidth%%';
+lang.EnterHeight = '%%LNG_JS_EnterHeight%%';
+lang.EnterDepth = '%%LNG_JS_EnterDepth%%';
+lang.EnterFixedShipping = '%%LNG_JS_EnterFixedShipping%%';
+lang.ProductHasNoDownloads = '%%LNG_JS_ProductHasNoDownloads%%';
+lang.EnterCurrentInventory = '%%LNG_JS_EnterCurrentInventory%%';
+lang.EnterLowInventory = '%%LNG_JS_EnterLowInventory%%';
+lang.ChooseProductVariation = '%%LNG_JS_ChooseProductVariation%%';
+lang.VariationChooseVariation = '%%LNG_JS_VariationChooseVariation%%';
+lang.VariationEnterValidPrice = '%%LNG_JS_VariationEnterValidPrice%%';
+lang.VariationEnterValidWeight = '%%LNG_JS_VariationEnterValidWeight%%';
+lang.VariationEnterValidImage = '%%LNG_JS_VariationEnterValidImage%%';
+lang.VariationEnterValidStockLevel = '%%LNG_JS_VariationEnterValidStockLevel%%';
+lang.VariationEnterValidLowStockLevel = '%%LNG_JS_VariationEnterValidLowStockLevel%%';
+lang.EnterCustomFieldName = '%%LNG_JS_EnterCustomFieldName%%';
+lang.SelectOneMoreWrapOptions = '%%LNG_JS_SelectOneMoreWrapOptions%%';
+lang.EnterSortOrder = '%%LNG_JS_EnterSortOrder%%';
+lang.EnterEventDateName = '%%LNG_JS_EnterEventDateName%%';
+lang.EnterEventDateRange = '%%LNG_JS_EnterEventDateRange%%';
+lang.AddProductWithEmptyDimensions = '%%LNG_JS_AddProductWithEmptyDimensions%%';
+lang.ConfirmCancelProduct = '%%LNG_JS_ConfirmCancelProduct%%';
+lang.ChooseOptionValue = '%%LNG_JS_ChooseOptionValue%%';
+lang.MorePricingOptions = '%%LNG_JS_MorePricingOptions%%';
+lang.LessPricingOptions = '%%LNG_JS_LessPricingOptions%%';
+lang.ConfirmChangeDownloadEdit = '%%LNG_JS_ConfirmChangeDownloadEdit%%';
+lang.InvalidExpiresAfter = '%%LNG_JS_InvalidExpiresAfter%%';
+lang.InvalidMaxDownloads = '%%LNG_JS_InvalidMaxDownloads%%';
+lang.SavingDownload = '%%LNG_JS_SavingDownload%%';
+lang.UploadFailed2 = '%%LNG_JS_UploadFailed2%%';
+lang.SelectDownloadFile = '%%LNG_JS_SelectDownloadFile%%';
+lang.UploadingDownload = '%%LNG_JS_UploadingDownload%%';
+lang.ConfirmDeleteDownload = '%%LNG_JS_ConfirmDeleteDownload%%';
+lang.DigitalDownloadDeleted = '%%LNG_JS_DigitalDownloadDeleted%%';
+lang.NoParent = '%%LNG_JS_NoParent%%';
+lang.NoCategoryName = '%%LNG_JS_NoCategoryName%%';
+lang.ProductWillUseVariation = '%%LNG_JS_ProductWillUseVariation%%';
+lang.ProductWillUseVariationSemi = '%%LNG_JS_ProductWillUseVariationSemi%%';
+lang.ConfirmRemoveProdField = '%%LNG_JS_ConfirmRemoveProdField%%';
+lang.DiscountRulesForEachItem = '%%LNG_JS_DiscountRulesForEachItem%%';
+lang.DiscountRulesOffEachItem = '%%LNG_JS_DiscountRulesOffEachItem%%';
+lang.DiscountRulesField = '%%LNG_JS_DiscountRulesField%%';
+lang.Number0 = '%%LNG_JS_Number0%%';
+lang.Number1 = '%%LNG_JS_Number1%%';
+lang.Number2 = '%%LNG_JS_Number2%%';
+lang.Number3 = '%%LNG_JS_Number3%%';
+lang.Number4 = '%%LNG_JS_Number4%%';
+lang.Number5 = '%%LNG_JS_Number5%%';
+lang.Number6 = '%%LNG_JS_Number6%%';
+lang.Number7 = '%%LNG_JS_Number7%%';
+lang.Number8 = '%%LNG_JS_Number8%%';
+lang.Number9 = '%%LNG_JS_Number9%%';
+lang.VideoLoading = '%%LNG_JS_VideoLoading%%';
+lang.VideoPleaseEnterSearchTerm = '%%LNG_JS_VideoPleaseEnterSearchTerm%%';
+lang.ClickHereToAddADescription = '%%LNG_JS_ClickHereToAddADescription%%';
+lang.ConfirmDeleteProductImage = '%%LNG_JS_ConfirmDeleteProductImage%%';
+lang.ChooseProductImage = '%%LNG_JS_ChooseProductImage%%';
+lang.ProductImagesDeleted = '%%LNG_JS_ProductImagesDeleted%%';
+lang.ProductImagesDeletedErrors = '%%LNG_JS_ProductImagesDeletedErrors%%';
+lang.ProductImagesDeletedWarnings = '%%LNG_JS_ProductImagesDeletedWarnings%%';
+lang.ProductImage = '%%LNG_JS_ProductImage%%';
+lang.ProductImageAddedSuccessfully = '%%LNG_JS_ProductImageAddedSuccessfully%%';
+lang.ProductImagesAddedSuccessfully = '%%LNG_JS_ProductImagesAddedSuccessfully%%';
+lang.ProductImageUrlsFailed = '%%LNG_JS_ProductImageUrlsFailed%%';
+lang.Images = '%%LNG_JS_Images%%';
+lang.ProductImagesProcessing = '%%LNG_JS_ProductImagesProcessing%%';
+lang.ProductImagesUploadError = '%%LNG_JS_ProductImagesUploadError%%';
+lang.ProductImagesTransportError = '%%LNG_JS_ProductImagesTransportError%%';
+lang.ProductImagesUploadProgressStatus = '%%LNG_JS_ProductImagesUploadProgressStatus%%';
+lang.ProductImagesUploadProgressFile = '%%LNG_JS_ProductImagesUploadProgressFile%%';
+lang.ProductImagesSortOrderChanged = '%%LNG_JS_ProductImagesSortOrderChanged%%';
+lang.ImageFromGalleryViewLarger = '%%LNG_JS_ImageFromGalleryViewLarger%%';
+lang.ProductImagesNoSourceImageNoThumbnail = '%%LNG_JS_ProductImagesNoSourceImageNoThumbnail%%';
+lang.ProductImagesNotUploadedDueToErrors = '%%LNG_JS_ProductImagesNotUploadedDueToErrors%%';
+lang.ProductImagesAnyImageNotListedHere = '%%LNG_JS_ProductImagesAnyImageNotListedHere%%';
+lang.UploadAnImage = '%%LNG_JS_UploadAnImage%%';
+lang.ProductImagesNonFlashIntro = '%%LNG_JS_ProductImagesNonFlashIntro%%';
+lang.ProductImagesUploadImagesElipsis = '%%LNG_JS_ProductImagesUploadImagesElipsis%%';
+lang.CancelEdit = '%%LNG_JS_CancelEdit%%';
+lang.ProductImagesNonFlashRemove = '%%LNG_JS_ProductImagesNonFlashRemove%%';
+lang.ShowErrorMessage = '%%LNG_JS_ShowErrorMessage%%';
+lang.ProductImagesChooseAnImage = '%%LNG_JS_ProductImagesChooseAnImage%%';
+//]]></script>
+<script type="text/javascript" src="script/product.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="script/product.youtube.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript">//<![CDATA[
+$(document).ready(function() {
+	%%GLOBAL_OptionButtons%%
+
+	// Toggle the product type
+	var f = g('ProductType_0');
+	if(f.checked)
+	{
+		ToggleType(0);
+	}
+	else
+	{
+		ToggleType(1);
+	}
+
+	ToggleAllowPurchasing();
+	ToggleCallForPricing();
+
+	if(g('prodInvTrack_2').checked) {
+		$('#prodOptionsRequired').attr('checked', true);
+		$('#prodOptionsRequired').attr('disabled', true);
+	}
+
+	$('#prodInvTrack_2').click(function() {
+		if(this.checked) {
+			$('#prodOptionsRequired').attr('checked', true);
+			$('#prodOptionsRequired').attr('disabled', true);
+		}
+	});
+
+	$('#prodInvTrack_1').click(function() {
+		$('#prodOptionsRequired').attr('checked', false);
+		$('#prodOptionsRequired').attr('disabled', false);
+	});
+
+	$('#prodInvTrack_0').click(function() {
+		$('#prodOptionsRequired').attr('checked', false);
+		$('#prodOptionsRequired').attr('disabled', false);
+	});
+
+	%%GLOBAL_MoreImages%%
+
+	ShowTab(%%GLOBAL_CurrentTab%%);
+
+	// Are related products set to auto?
+	if(shop.config.IsProdRelatedAuto == 'checked="checked"') {
+		toggle_related_auto(true);
+	}
+
+	youtube.videos = '%%GLOBAL_YouTubeVideos%%';
+	youtube.init();
+
+	$('input[type=submit]').attr('disabled', '');
+});
+//]]></script>
+

@@ -1,0 +1,325 @@
+/* Standard tags
+---------------------------------- */
+* { margin: 0; padding: 0; }
+* {	/* IE only scrollbar colouring */
+	scrollbar-face-color: #838383;
+	scrollbar-darkshadow-color: #CCC8C8;
+	scrollbar-3dlight-color: #CCC8C8;
+	scrollbar-arrow-color: #F1F1F1;
+	scrollbar-highlight-color: #CCC8C8;
+	scrollbar-shadow-color: #CCC8C8;
+	scrollbar-track-color: #BDB9B9;
+	}
+body {
+	background: #CCC8C8;
+	color: #666666;
+	}
+body.chatbody {
+	background-color: #F1F1F1;
+	color: #666666;
+	}
+body.monitorbody {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	margin: 5px;
+	}
+body.faqbody {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #CCC8C8;
+	margin: 5px 0 5px 5px;
+	width: 92%;
+	}
+	
+h1 {
+	font-size: 16px;
+	color: #444444;
+	}
+h2 {
+	font-size: 14px;
+	margin: 0.3em 0;
+	}
+h3 {
+	font-size: 11px;
+	margin: 0.3em 0;
+	border-bottom: 1px solid #CCCCCC;
+	text-transform: uppercase;
+	}
+
+select { font-size: 10px; width: 100px; }
+p { font-size: 12px; margin-bottom: 0.5em; }
+
+hr {
+	border: 0px none transparent;
+	border-top: 1px dashed #333333;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	height: 1px;
+	}
+
+
+
+/* Input fields */
+input, textarea {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	}
+input, textarea, #chat {
+	background-color: #F1F1F1;
+	border: 1px solid #F1F1F1;
+	}
+.radio {
+	border: none;
+	background: none;
+	}
+#send {
+	width: 55px;
+	height: 42px;
+	cursor: pointer;
+	font-weight: bold;
+	color: #333333;
+	background: #F1F1F1 url(images/button.gif) top left no-repeat;
+	border: none !important;
+	}
+#send:hover {
+	color: #E02169;
+	background-position: 0 -43px;
+	}
+.go, .button {
+	background-image: none;
+	background-color: #F1F1F1;
+	border: 1px solid #F1F1F1;
+	cursor: pointer;
+	}
+
+/* Links */
+a:link, a:visited { color: #755775; text-decoration: none; }
+a:hover { text-decoration: underline; color: #EB236E; }
+a:active { text-decoration: none; color: #E02169; }
+a:hover img { text-decoration: none; }
+
+
+
+/* Copyright link */
+#copyright a:link, #copyright a:visited, #copyright a:active {
+	text-decoration: none;	color: #666666;
+	}
+#copyright a:hover { text-decoration: none; color: #FFFFFF;  }
+
+
+/* Online/offline */
+td.online {
+	background-color: #D6E9D6 !important;
+	font-weight: bold;
+	}
+td.offline {
+	
+	}
+div.online label, div.offline label {
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: bold;
+	}
+.online {
+	color: #009118;
+	}
+.offline {
+	color: #999999;
+	}
+
+
+/* Conversation window attributes */
+#conversation p {
+	font-size: 90% !important;
+	margin-bottom: 0.7em;
+	line-height: 135%;
+	}
+#conversation img {
+	border: none;
+	display: block;
+	clear: both;
+	margin: 5px 0;
+	}
+p.notice {
+	border-top: 1px dashed #666666;
+	border-bottom: 1px dashed #666666;
+	color: #666666;
+	padding: 8px 0;
+	margin: 0.5em 0;
+	font-style: italic;
+	}
+p.client {
+	font-weight: normal;
+	color: #777777;
+	}
+p.client span {
+	font-weight: bold;
+	color: #666666;
+	}
+p.operator {
+	font-weight: normal;
+	color: #444444;
+	}
+p.operator span {
+	font-weight: bold;
+	}
+p.alert {
+	font-weight: bold;
+	color: #EE003C;
+	border-top: 1px dashed #EE003C;
+	border-bottom: 1px dashed #EE003C;
+	padding: 8px 0;
+	margin: 0.5em 0;
+	}
+
+
+/* Conversation links */
+#conversation a:link, #conversation a:visited, #conversation a:active {
+	text-decoration: none;
+	color: #222222;
+	border-bottom: 1px solid #222222;
+	}
+#conversation a:visited { color: #444444; border-bottom-style: dotted; border-bottom-color: #444444; }
+#conversation a:active  { color: #222222; }
+#conversation a:hover   { background-color: #FFFFFF; text-decoration: none; border-bottom-color: #E02169; color: #E02169; }
+
+
+
+/* Buttons
+---------------------------------- */
+#options {
+	background-color: #BDB9B9;
+	}
+#sound_print {
+	background-color: #BDB9B9;
+	}
+a.print, a.font, a.soundOn, a.soundOff {
+	padding: 1px 0 1px 20px;
+	line-height: 15px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	}
+a.soundOff { background-position: 0 -16px; }
+a.print { background-image: url("images/icon_print.gif"); }
+a.font  { background-image: url("images/icon_font.gif"); }
+a.soundOn, a.soundOff { background-image: url("images/icon_sound.gif"); }
+
+
+
+
+/* FAQ Styles
+---------------------------------- */
+p.question {
+	font-weight: bold;
+	font-size: 13px;
+	color: #333333;
+	}
+p.answer { 
+	font-style: italic;
+	margin: 0;
+	color: #333333;
+	}
+p.rate {
+	font-size: 11px;
+	margin-top: 10px;
+	}
+p.rate label {
+	padding: 0 10px;
+	vertical-align: middle;
+	}
+div.cookie {
+	padding: 5px 3px;
+	margin-top: 10px;
+	margin-bottom: 4px;
+	background-color: #FCFCFC;
+	border-bottom: 1px dashed #999999;
+	}
+div.faq ul {
+	margin-left: 15px;
+	}
+div.faq li {
+	list-style-type: none;
+	}
+div.faq li.headcat {
+	list-style-type: square;
+	font-weight: bold;
+	color: #333333;
+	}
+
+
+
+/* Tabs
+---------------------------------- */
+#tabs a { background:url("images/tabs_left.gif") no-repeat 0% 0px; }
+#tabs a span { 
+	background: url("images/tabs_right.gif") no-repeat 100% 0px;
+	color: #555555;
+	}
+#tabs a:hover span { color: #222222; }
+#tabs li.activetab a { border-bottom: 1px solid #F1F1F1; }
+#tabs li.activetab a span {	color: #000000; }
+#tabs ii.activetab a:hover span { color: #000000;}
+
+
+
+/* Operator styles
+---------------------------------- */
+body.operatorbody {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #F1F1F1;
+	color: #333333;
+	background-image: none;
+	margin: 5px;
+	}
+* html body.operatorbody { width: 92%; } /* IE tweak */
+#operator {
+	background-color: #BDB9B9;
+	}
+#operatorpanel {
+	background-color: #F1F1F1;
+	border: 1px solid #F1F1F1;
+	}
+div.logo {
+	border-bottom: 2px solid #999999;
+	margin-bottom: 4px;
+	}
+
+
+
+
+/* Tables
+---------------------------------- */
+table {
+	width: 100%;
+	margin-bottom: 10px;
+	}
+table thead th {
+	text-align: left;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #666666;
+	font-size: 11px;
+	}
+table tbody th {
+	text-align: right;
+	padding: 3px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 10px;
+	background-color: #FFFFFF;
+	color: #333333;
+	}
+table tbody.subhead th {
+	text-align: left;
+	background-color: #FFFFFF;
+	color: #333333;
+	}
+table tbody td {
+	padding: 3px;
+	font-size: 11px;
+	background-color: #FCFCFC;
+	color: #333333;
+	}
+tr.row1 td { background-color: #DEDEDE; }
+tr.row2 td { background-color: #FCFCFC; }

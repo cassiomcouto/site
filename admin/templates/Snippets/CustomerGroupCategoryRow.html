@@ -1,0 +1,27 @@
+<div id="categoryRule%%GLOBAL_CategoryId%%" class="catRules">
+	%%LNG_ForProductsInThisCategory%%
+	<select id="categoryRuleValue%%GLOBAL_CategoryId%%" class="catRulesProductId" onchange="$('#categoryRuleDiscount%%GLOBAL_CategoryId%%').focus(); remapHiddenDiscounts('category', %%GLOBAL_CategoryId%%);">
+		<option>-- Choose a Category --</option>
+		%%GLOBAL_CategoryOptions%%
+	</select>
+	%%LNG_CustomersReceiveA%%
+
+	<span id="categoryDiscountRulesAmountPrefix%%GLOBAL_CategoryId%%">%%GLOBAL_AmountPrefix%%</span>
+	<input class="catRulesDiscount Field50" id="categoryRuleDiscount%%GLOBAL_CategoryId%%" type="text" value="%%GLOBAL_DiscountAmount%%" class="Field50" style="width:30px" onchange="remapHiddenDiscounts('category', %%GLOBAL_CategoryId%%);" />
+	<span id="categoryDiscountRulesAmountPostfix%%GLOBAL_CategoryId%%">%%GLOBAL_AmountPostfix%%</span>
+
+	<select id="categoryDiscountMethod%%GLOBAL_CategoryId%%" class="Field120" onchange="ToggleDiscountRateValueType(%%GLOBAL_CategoryId%%, 'category');">
+		<option value="price" %%GLOBAL_DiscountMethodPrice%%>%%LNG_PriceDiscount%%</option>
+		<option value="percent" %%GLOBAL_DiscountMethodPercent%%>%%LNG_PercentageDiscount%%</option>
+		<option value="fixed" %%GLOBAL_DiscountMethodFixed%%>%%LNG_FixedPrice%%</option>
+	</select>
+
+	<span id="categoryDiscountRulesLineEnding%%GLOBAL_CategoryId%%"> %%LNG_For%% </span>
+	<select id="categoryRuleAppliesTo%%GLOBAL_CategoryId%%" onchange="remapHiddenDiscounts('category', %%GLOBAL_CategoryId%%);">
+		<option value="CATEGORY_ONLY" %%GLOBAL_DiscountCatTypeCat%%>%%LNG_ProductsInThisCategory%%</option>
+		<option value="CATEGORY_AND_SUBCATS" %%GLOBAL_DiscountCatTypeCatAndSub%%>%%LNG_ProductsInThisCategory2%%</option>
+	</select>
+
+	<img title="%%LNG_AddAnotherCategoryDiscount%%" style="cursor:pointer" src="images/addicon.gif" width="16" height="16" onclick="addDiscountRule('category');" />
+	<img title="%%LNG_RemoveThisCategoryDiscount%%" style="cursor:pointer" src="images/delicon.gif" width="16" height="16" onclick="removeDiscountRule('category', %%GLOBAL_CategoryId%%)" />
+</div>

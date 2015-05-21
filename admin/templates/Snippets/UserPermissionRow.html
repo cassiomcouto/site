@@ -1,0 +1,12 @@
+<tr class="PermissionSelects">
+	<td class="FieldLabel">
+		&nbsp;&nbsp;&nbsp;%%GLOBAL_GroupTitle%%:
+		<br />&nbsp;&nbsp;&nbsp;
+		(<a onclick="SetupPermissions('%%GLOBAL_GroupCode%%', true); return false;" href="#">%%LNG_SelectAll%%</a> / <a onclick="SetupPermissions('%%GLOBAL_GroupCode%%', false); return false;" href="#">%%LNG_UnselectAll%%</a>)
+	</td>
+	<td>
+		<select name="permissions[%%GLOBAL_GroupCode%%][]" id="permissions_%%GLOBAL_GroupCode%%" multiple="multiple" size="13" class="Field250 ISSelectReplacement permission_select" %%GLOBAL_DisablePermissions%%>
+			%%GLOBAL_GroupPermissions%%
+		</select>
+	</td>
+</tr>

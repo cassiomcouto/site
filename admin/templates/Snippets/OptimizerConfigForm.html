@@ -1,0 +1,114 @@
+<script type="text/javascript" src="script/optimizer.js?%%GLOBAL_JSCacheToken%%"></script>
+
+<table  id="OptimizerConfigForm" style ="margin-top:0px; %%GLOBAL_HideOptimizerConfigForm%%" width="100%" class="Panel">
+	<tr>
+		<td class="FieldLabel"  style="padding-top:12px;">
+			&nbsp;&nbsp;&nbsp;%%LNG_TestType%%:</dt>
+		</td>
+		<td style="padding-top:8px;">
+			<img src="images/nodejoin.gif" style="float: left;"/>
+			<div style='float:left;margin-top:5px;margin-left:7px;'>%%GLOBAL_OptimizerTestType%%</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="FieldLabel" style="padding-top: 8px;">
+			&nbsp;&nbsp;&nbsp;%%LNG_TestPageUrl%%:
+		</td>
+		<td style="padding:5px 0 0 27px;">
+			<input readonly onclick="this.select();" class="Field400" value="%%GLOBAL_ValidateTestPageUrl%%" />
+			
+		</td>
+	</tr>
+	<tr>
+		<td class="FieldLabel" style="padding-top:8px;">
+			&nbsp;&nbsp;&nbsp;%%LNG_ConversionPageUrl%%:
+		</td>
+		<td style="padding:5px 0 0 27px;">
+			<input readonly class="Field400" onclick="this.select();" value="%%GLOBAL_ValidateConversionPageUrl%%" />
+		</td>
+	</tr>
+	<tr>
+		<td class="FieldLabel">
+			&nbsp;&nbsp;&nbsp;%%LNG_ScriptInstallURL%%:
+		</td>
+		<td style="padding-left:27px;">
+			<input name="InstallUrl" style="width:312px;" value="%%GLOBAL_ScriptInstallURL%%" />
+			 &nbsp;
+			<input name="SaveManual" type="button" onclick="Optimizer.InstallAutoScripts();" value="%%LNG_InstallScript%%">
+			&nbsp; <img height="16" width="24" border="0" style="margin-top: 5px;" src="images/help.gif" onmouseover="ShowHelp('gwo1', '%%LNG_ScriptInstallURL%%', '%%LNG_InstallUrlHelp%%')" onmouseout="HideHelp('gwo1');"/>
+			<div id="gwo1" style="display: none;"></div>
+
+			<div class="GrayHelpText">%%LNG_InstallUrlIntro%%</div>
+
+		</td>
+	</tr>
+	<tr>
+		<td class="FieldLabel">
+			<span class='Required'>*</span> %%LNG_ConversionPage%%:
+		</td>
+		<td style="padding-left:27px;">
+			<select id="ConversionPage" name="ConversionPage" onchange="Optimizer.ChangeConversionPage('%%GLOBAL_ModuleId%%');">
+				<option value=''>%%LNG_ChooseAnOption%%</option>
+				%%GLOBAL_ConversionPageOptions%%
+			</select>
+			&nbsp; <img height="16" width="24" border="0" style="margin-top: 5px;" src="images/help.gif" onmouseover="ShowHelp('gwo2', '%%LNG_ConversionPage%%', '%%LNG_ConversionPageHelp%%')" onmouseout="HideHelp('gwo2');"/>
+			<div id="gwo2" style="display: none;"></div>
+
+			<div id="CustomConversionHelp" style="%%GLOBAL_HideCustomConversionHelp%%">
+
+				<img class="FloatLeft" alt="" src="images/nodejoin.gif"/>
+				
+				<input name='ConversionPageUrl' id='ConversionPageUrl' class='Field350' value='%%GLOBAL_ConversionPageURL%%' />
+				
+				<img height="16" width="24" border="0" style="margin-top: 5px;" src="images/help.gif" onmouseover="ShowHelp('gwo3', '%%LNG_CustomConversionPage%%', '%%LNG_CustomConversionHelp%%')" onmouseout="HideHelp('gwo3');"/>
+				<div id="gwo3" style="display: none;"></div>
+
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="FieldLabel">
+			<span class='Required'>*</span> %%LNG_ControlScript%%:
+		</td>
+		<td style="padding-left:27px;">
+			<textarea class="Field400" rows="5" id="ControlScript" name="ControlScript">%%GLOBAL_ControlScript%%</textarea>
+			<img height="16" width="24" border="0" style="margin-top: 5px;" src="images/help.gif" onmouseover="ShowHelp('gwo4', '%%LNG_ControlScript%%', '%%LNG_ControlScriptHelp%%')" onmouseout="HideHelp('gwo4');"/>
+			<div id="gwo4" style="display: none;"></div>
+		</td>
+	</tr>
+	<tr>
+		<td class="FieldLabel">
+			<span class='Required'>*</span> %%LNG_TrackingScript%%:
+		</td>
+		<td style="padding-left:27px;">
+			<textarea class="Field400" rows="5" id="TrackingScript" name="TrackingScript">%%GLOBAL_TrackingScript%%</textarea>
+			<img height="16" width="24" border="0" style="margin-top: 5px;" src="images/help.gif" onmouseover="ShowHelp('gwo5', '%%LNG_TrackingScript%%', '%%LNG_TrackingScriptHelp%%')" onmouseout="HideHelp('gwo5');"/>
+			<div id="gwo5" style="display: none;"></div>
+		</td>
+	</tr>
+	<tr>
+		<td class="FieldLabel">
+			<span class='Required'>*</span> %%LNG_ConversionScript%%:
+		</td>
+		<td style="padding-left:27px;">
+			<textarea class="Field400" rows="5" id="ConversionScript" name="ConversionScript">%%GLOBAL_ConversionScript%%</textarea>				
+			<img height="16" width="24" border="0" style="margin-top: 5px;" src="images/help.gif" onmouseover="ShowHelp('gwo6', '%%LNG_ConversionScript%%', '%%LNG_ConversionScriptHelp%%')" onmouseout="HideHelp('gwo6');"/>
+			<div id="gwo6" style="display: none;"></div>
+		</td>
+	</tr>
+
+</table>
+
+<script type="text/javascript">
+lang.ChooseConvertionpage = "%%LNG_ChooseConvertionpage%%";
+lang.EnterInstallUrl = "%%LNG_EnterInstallUrl%%";
+lang.EnterConversionScript = "%%LNG_EnterConversionScript%%";
+lang.EnterControlScript = "%%LNG_EnterControlScript%%";
+lang.EnterTrackingScript = "%%LNG_EnterTrackingScript%%";
+lang.ProblemDuringRequest = "%%LNG_ProblemDuringRequest%%";
+lang.ConfirmEnableProductOptimizer = "%%LNG_ConfirmEnableProductOptimizer%%";
+lang.ConfirmEnableCategoryOptimizer = "%%LNG_ConfirmEnableCategoryOptimizer%%";
+lang.ConfirmEnablePageOptimizer = "%%LNG_ConfirmEnablePageOptimizer%%";
+lang.EnterValidConversionUrl = "%%LNG_EnterValidConversionUrl%%";
+</script>
