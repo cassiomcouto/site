@@ -1,92 +1,156 @@
-
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-             <!--
-    Important Note About This Website's SEO
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ONE - Personal Resume</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-    Find the SEO content of this site's homepage via http://cassiomcouto.wix.com/cassio?_escaped_fragment_=
-    (That is where search engines like Google go to read your homepage's content.)
+<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=3.3"></script>	
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 
-    To view the SEO content of your internal pages, such as "CONTATO", go here: http://cassiomcouto.wix.com/cassio?_escaped_fragment_=contact/c1d94
-    (That is where search engines like Google go to read the content on your internal pages.)
+</head>
 
-    For more information about Ajax Crawling technology, read Google's explanation here: https://developers.google.com/webmasters/ajax-crawling/
--->
-
-    
-                <meta charset="utf-8"/>
-<title>Cássio Couto</title>
-<meta name="fb_admins_meta_tag" content=""/>
-<link rel="shortcut icon" href="http://www.wix.com/favicon.ico" type="image/x-icon"/>
-<link rel="apple-touch-icon" href="http://www.wix.com/favicon.ico" type="image/x-icon"/>
-<link rel="canonical" href="http://cassiomcouto.wix.com/cassio"/>
-    <meta http-equiv="X-Wix-Renderer-Server" content="app29.aus"/>
-<meta http-equiv="X-Wix-Meta-Site-Id" content="ead00c4a-57af-47cf-b3dd-0560c9372493"/>
-<meta http-equiv="X-Wix-Application-Instance-Id" content="34164a86-32b7-4ce9-8883-8b5e34ead4ba"/>
-<meta http-equiv="X-Wix-Published-Version" content="2"/>
-
-<meta http-equiv="etag" content="9ee1d0ec91b35026e04f21858bf9ea0c"/>
-<meta property="og:title" content="cassio"/>
-<meta property="og:type" content="article"/>
-<meta property="og:url" content="http://cassiomcouto.wix.com/cassio"/>
-<meta property="og:site_name" content="cassio"/>
-<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
-
-<meta id="wixMobileViewport" name="viewport" content="minimum-scale=0.25, maximum-scale=1.2"/>
-
-
-        
-
-            <script>
-            // BEAT MESSAGE
-    try {
-        window.wixBiSession = {
-            initialTimestamp : Date.now(),
-            viewerSessionId: 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c)
-                    { var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8); return v.toString(16); }
-            )
-        };
-        (new Image()).src = 'http://frog.wix.com/bt?src=29&evid=3&pn=1&et=1&v=3.0&vsi=' + wixBiSession.viewerSessionId +
-                '&url=' + encodeURIComponent(location.href.replace(/^http(s)?:\/\/(www\.)?/, '')) +
-                '&isp=0&st=2&ts=0&c=' + wixBiSession.initialTimestamp;
-    } catch (e){}
-    // BEAT MESSAGE END
-</script>    
-    
-
-    <!-- META DATA -->
-<script type="text/javascript">
-
-    var serviceTopology = {"serverName":"app29.aus","cacheKillerVersion":"1","staticServerUrl":"http://static.parastorage.com/","usersScriptsRoot":"http://static.parastorage.com/services/wix-users/2.487.0","biServerUrl":"http://frog.wix.com/","userServerUrl":"http://users.wix.com/","billingServerUrl":"http://premium.wix.com/","mediaRootUrl":"http://static.wixstatic.com/","logServerUrl":"http://frog.wix.com/plebs","monitoringServerUrl":"http://TODO/","usersClientApiUrl":"https://users.wix.com/wix-users","publicStaticBaseUri":"http://static.parastorage.com/services/wix-public/1.160.0","basePublicUrl":"http://www.wix.com/","postLoginUrl":"http://www.wix.com/my-account","postSignUpUrl":"http://www.wix.com/new/account","baseDomain":"wix.com","staticMediaUrl":"http://static.wixstatic.com/media","staticAudioUrl":"http://storage.googleapis.com/static.wixstatic.com/mp3","emailServer":"http://assets.wix.com/common-services/notification/invoke","blobUrl":"http://static.parastorage.com/wix_blob","htmlEditorUrl":"http://editor.wix.com/html","siteMembersUrl":"https://users.wix.com/wix-sm","scriptsLocationMap":{"wixapps":"http://static.parastorage.com/services/wixapps/2.461.12","tpa":"http://static.parastorage.com/services/tpa/2.1041.0","santa-resources":"http://static.parastorage.com/services/santa-resources/1.0.0","bootstrap":"http://static.parastorage.com/services/bootstrap/2.1144.74","ck-editor":"http://static.parastorage.com/services/ck-editor/1.87.2","it":"http://static.parastorage.com/services/experiments/it/1.37.0","skins":"http://static.parastorage.com/services/skins/2.1144.74","core":"http://static.parastorage.com/services/core/2.1144.74","sitemembers":"http://static.parastorage.com/services/sm-js-sdk/1.31.0","automation":"http://static.parastorage.com/services/automation/1.23.0","web":"http://static.parastorage.com/services/web/2.1144.74","ecommerce":"http://static.parastorage.com/services/ecommerce/1.190.0","hotfixes":"http://static.parastorage.com/services/experiments/hotfixes/1.15.0","langs":"http://static.parastorage.com/services/langs/2.553.0","santa-versions":"http://static.parastorage.com/services/santa-versions/1.279.0","ut":"http://static.parastorage.com/services/experiments/ut/1.2.0"},"developerMode":false,"productionMode":true,"staticServerFallbackUrl":"https://sslstatic.wix.com/","staticVideoUrl":"http://storage.googleapis.com/video.wixstatic.com","userFilesUrl":"http://static.parastorage.com/","staticHTMLComponentUrl":"http://cassiomcouto.wix.com.usrfiles.com/","secured":false,"ecommerceCheckoutUrl":"https://www.safer-checkout.com/","premiumServerUrl":"https://premium.wix.com/","appRepoUrl":"http://assets.wix.com/wix-lists-ds-webapp","digitalGoodsServerUrl":"http://dgs.wixapps.net/","wixCloudBaseDomain":"cloud.wix.com","publicStaticsUrl":"http://static.parastorage.com/services/wix-public/1.160.0","staticDocsUrl":"http://media.wix.com/ugd"};
-        var santaModels = true;
-    var rendererModel = {"metaSiteId":"ead00c4a-57af-47cf-b3dd-0560c9372493","siteInfo":{"documentType":"UGC","applicationType":"HtmlWeb","siteId":"34164a86-32b7-4ce9-8883-8b5e34ead4ba","siteTitleSEO":"cassio"},"clientSpecMap":{"0":{"type":"appbuilder","applicationId":0,"appDefinitionId":"3d590cbc-4907-4cc4-b0b1-ddf2c5edf297","instanceId":"13e54fb0-ff4f-a037-b596-115275191f4e","state":"Initialized"},"11":{"type":"sitemembers","applicationId":11,"collectionType":"Open","smcollectionId":"69c35c49-5ddb-408f-9466-5912e8ab44b7","smtoken":"0693f1df9b384552828e9a0f443d98b33fc50fb1f474d8de9cd1ab2236c6e3c5b2b9829a2709165fdcb997ab84a8f8c3dcea40706c8e712c6e67b359d1f1b66e48e3f0580d7ff67a7379a3ad0444417c2cda977f88b7b70a7989175a73c63e54"}},"premiumFeatures":[],"geo":"BRA","languageCode":"pt","previewMode":false,"userId":"9205bdce-46c6-4fa8-856e-b320cfa10561","siteMetaData":{"preloader":{"enabled":false},"adaptiveMobileOn":true,"quickActions":{"socialLinks":[],"colorScheme":"dark","configuration":{"quickActionsMenuEnabled":false,"navigationMenuEnabled":true,"phoneEnabled":false,"emailEnabled":false,"addressEnabled":false,"socialLinksEnabled":false}},"contactInfo":{"companyName":"","phone":"","fax":"","email":"","address":""}},"runningExperiments":{"autogeneratedshapesskins":"new","lang_no":"new","ngcore":"new","sandboxiframeineditor":"new","lang_nl":"new","wixappsgalleries":"new","ecomgalleries":"new","disablehorizontalmenu":"new","lazyprovision":"new","atntfixlists":"new","exitmobilemode":"new","workaroundsaveddeadcompskin":"new","nougcanalytics":"new","appbuilderdeletetype":"new","sitepagesvalidation":"new","redirectfeature301data":"new","linkfixeroverride":"new","redirectfeature301":"new","lazyprovisiontemp":"new","animation3dfix":"new","landingpagesupport":"new","lang_sv":"new","wixappstranslation":"new","subscribeformsendnewsletter":"new","lesserwidthissue":"new","appbuildertags":"new","sitenavigationrefactor":"new","blogrss":"new","animationnewbehaviors":"new","customsitemenu":"new","blogmanager":"new"}};
-    var publicModel = {"domain":"wix.com","externalBaseUrl":"http:\/\/cassiomcouto.wix.com\/cassio","unicodeExternalBaseUrl":"http:\/\/cassiomcouto.wix.com\/cassio","pageList":{"masterPage":["http:\/\/static.wixstatic.com\/sites\/9205bd_129aef92b686c10850fd76568b454d0f_1.json.z?v=3","http:\/\/staticorigin.wixstatic.com\/sites\/9205bd_129aef92b686c10850fd76568b454d0f_1.json.z?v=3","http:\/\/fallback.wix.com\/wix-html-editor-pages-webapp\/page\/9205bd_129aef92b686c10850fd76568b454d0f_1.json"],"pages":[{"pageId":"c1d94","title":"CONTATO","urls":["http:\/\/static.wixstatic.com\/sites\/9205bd_52bfb65393acfc8a6668c40b1576facc_1.json.z?v=3","http:\/\/staticorigin.wixstatic.com\/sites\/9205bd_52bfb65393acfc8a6668c40b1576facc_1.json.z?v=3","http:\/\/fallback.wix.com\/wix-html-editor-pages-webapp\/page\/9205bd_52bfb65393acfc8a6668c40b1576facc_1.json"]},{"pageId":"cm8a","title":"PROJETOS","urls":["http:\/\/static.wixstatic.com\/sites\/9205bd_f0e575517b06e4802d64707d20c98f33_1.json.z?v=3","http:\/\/staticorigin.wixstatic.com\/sites\/9205bd_f0e575517b06e4802d64707d20c98f33_1.json.z?v=3","http:\/\/fallback.wix.com\/wix-html-editor-pages-webapp\/page\/9205bd_f0e575517b06e4802d64707d20c98f33_1.json"]},{"pageId":"c46c","title":"CURRÍCULO","urls":["http:\/\/static.wixstatic.com\/sites\/9205bd_4cc8656e5b4415a7ca99b312ab395d20_1.json.z?v=3","http:\/\/staticorigin.wixstatic.com\/sites\/9205bd_4cc8656e5b4415a7ca99b312ab395d20_1.json.z?v=3","http:\/\/fallback.wix.com\/wix-html-editor-pages-webapp\/page\/9205bd_4cc8656e5b4415a7ca99b312ab395d20_1.json"]},{"pageId":"mainPage","title":"HOME","urls":["http:\/\/static.wixstatic.com\/sites\/9205bd_4b84320d8fa0940094752e9efb654776_1.json.z?v=3","http:\/\/staticorigin.wixstatic.com\/sites\/9205bd_4b84320d8fa0940094752e9efb654776_1.json.z?v=3","http:\/\/fallback.wix.com\/wix-html-editor-pages-webapp\/page\/9205bd_4b84320d8fa0940094752e9efb654776_1.json"]}],"mainPageId":"mainPage"},"timeSincePublish":12246,"favicon":""};
-    
-
-
-    var googleAnalytics = ""
-    ;
-
-    var googleRemarketing = "";
-    var facebookRemarketing = "";
-
-</script>
-
-
-
-    </head>
 <body>
-                <div id="SITE_CONTAINER"></div>
-    
-    
-        
+<div id="header">
+	<div id="logo"><a href="#"><img src="images/logo.png"></a></div>
+	<ul id="main-menu">
+    	<li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#connect">Connect</a></li>
+    </ul>
+</div>
 
-    
-    
-    
-        
-    
+<div id="container">
+
+<!--Begin About Section-->
+    <div id="about">
+    	<h1>About</h1>
+        <ul id="top-social">
+        	<li><a href="#" class="facebook">Facebook</a></li>
+            <li><a href="#" class="twitter">Twitter</a></li>
+            <li><a href="#" class="linkedin">LinkedIn</a></li>
+        </ul>
+        <div class="top-divider"></div>
+        <div class="content">
+        	<img src="images/designer-photo.jpg" />
+            <h2>My Name is John Doe, and I am a Designer</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras diam risus, dignissim pharetra sagittis sed, adipiscing nec felis. Maecenas non nulla eget ligula semper aliquet. Pellentesque adipiscing pulvinar tortor, a adipiscing felis commodo in. Vestibulum dui magna, mattis in bibendum a, congue vitae lectus. In eu odio tortor, vel congue lacus. Donec viverra viverra eros, in egestas ligula adipiscing non. Morbi et ultricies sapien. Duis metus odio, commodo in tempor quis, euismod et ligula. Vivamus tristique condimentum ipsum sit amet posuere.</p> 
+            <ul id="service-icons">
+            	<li class="services-design">Design</li>
+                <li class="services-mobile">Mobile</li>
+                <li class="services-film">Film</li>
+                <li class="services-photo">Photo</li>
+            </ul>
+        </div>
+    <div class="bottom-divider"></div> 
+    </div>
+<!--End About Section-->
+
+<!--Begin Experience Section-->   
+    <div id="experience">
+    	<h1>Experience</h1>
+        <div class="top-divider"></div>
+        <div class="content">
+            <div class="col">
+            <h2>Description of Work</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras diam risus, dignissim pharetra sagittis sed, adipiscing nec felis. Maecenas non nulla eget ligula semper aliquet. Pellentesque adipiscing pulvinar tortor, a adipiscing felis commodo in. Vestibulum dui magna, mattis in bibendum a, congue vitae lectus. In eu odio tortor, vel congue lacus. Donec viverra viverra eros, in egestas ligula adipiscing non. Morbi et ultricies sapien. Duis metus odio, commodo in tempor quis, euismod et ligula. Vivamus tristique condimentum </p>
+            </div>
+            
+            <div class="col col-mid">
+            <h2>Description of Work</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras diam risus, dignissim pharetra sagittis sed, adipiscing nec felis. Maecenas non nulla eget ligula semper aliquet. Pellentesque adipiscing pulvinar tortor, a adipiscing felis commodo in. Vestibulum dui magna, mattis in bibendum a, congue vitae lectus. In eu odio tortor, vel congue lacus. Donec viverra viverra eros, in egestas ligula adipiscing non. Morbi et ultricies sapien. Duis metus odio, commodo in tempor quis, euismod et ligula. Vivamus tristique condimentum </p>
+            </div>
+            
+            <div class="col">
+            <h2>Description of Work</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras diam risus, dignissim pharetra sagittis sed, adipiscing nec felis. Maecenas non nulla eget ligula semper aliquet. Pellentesque adipiscing pulvinar tortor, a adipiscing felis commodo in. Vestibulum dui magna, mattis in bibendum a, congue vitae lectus. In eu odio tortor, vel congue lacus. Donec viverra viverra eros, in egestas ligula adipiscing non. Morbi et ultricies sapien. Duis metus odio, commodo in tempor quis, euismod et ligula. Vivamus tristique condimentum </p>
+            </div>
+        </div>    
+        <div class="bottom-divider"></div>
+    </div>
+<!--End Experience Section-->
+
+<!--Begin Work Section-->  
+    <div id="work">
+    	<h1>Work</h1>
+        <div class="top-divider"></div>
+        	<div class="content">
+            	<ul id="work-thumbs">
+                	<li><a href="images/work/work-full1.jpg" rel="prettyPhoto[1]" title="Image Description"><img src="images/work/work-thumb1.jpg"></a></li>
+                    <li><a href="images/work/work-full2.jpg" rel="prettyPhoto[1]" title="Image Description"><img src="images/work/work-thumb2.jpg"></a></li>
+                    <li><a href="images/work/work-full3.jpg" rel="prettyPhoto[1]" title="Image Description"><img src="images/work/work-thumb3.jpg"></a></li>
+                    <li class="last"><a href="images/work/work-full4.jpg" rel="prettyPhoto[1]" title="Image Description"><img src="images/work/work-thumb4.jpg"></a></li>
+                    <li><a href="images/work/work-full5.jpg" rel="prettyPhoto[1]" title="Image Description"><img src="images/work/work-thumb5.jpg"></a></li>
+                    <li><a href="images/work/work-full6.jpg" rel="prettyPhoto[1]" title="Image Description"><img src="images/work/work-thumb6.jpg"></a></li>
+                    <li><a href="images/work/work-full7.jpg" rel="prettyPhoto[1]" title="Image Description"><img src="images/work/work-thumb7.jpg"></a></li>
+                    <li class="last"><a href="images/work/work-full8.jpg" rel="prettyPhoto[1]" title="Image Description"><img src="images/work/work-thumb8.jpg"></a></li>
+                    <li><a href="images/work/work-full9.jpg" rel="prettyPhoto[1]" title="Image Description"><img src="images/work/work-thumb9.jpg"></a></li>
+                    <li><a href="images/work/work-full10.jpg" rel="prettyPhoto[1]" title="Image Description"><img src="images/work/work-thumb10.jpg"></a></li>
+                    <li><a href="images/work/work-full11.jpg" rel="prettyPhoto[1]" title="Image Description"><img src="images/work/work-thumb11.jpg"></a></li>
+                    <li class="last"><a href="images/work/work-full12.jpg" rel="prettyPhoto[1]" title="Image Description"><img src="images/work/work-thumb12.jpg"></a></li>
+                </ul>
+            </div>
+        <div class="bottom-divider"></div>
+    </div>
+<!--End Work Section-->
+
+<!--Begin Connect Section-->  
+    <div id="connect">
+    	<h1>Connect</h1>
+        <div class="top-divider"></div>
+        	<div class="content">
+            	<div id="form">
+                	<form action="#">
+                    	<span>Name</span>
+                        <input type="text" name="name" class="name" />
+                        <span>Email</span>
+                        <input type="text" name="email" class="email"/>
+                        <span>Message</span>
+                        <textarea class="message"></textarea>
+                        <input type="submit" name="submite" value="Submit" class="submit">
+                    </form>
+                </div>
+                <div id="social-footer">
+                	<h2>Follow Me:</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras diam risus, dignissim pharetra sagittis sed, adipiscing nec felis. Maecenas non nulla eget ligula semper </p>
+                    <ul id="sm-links">
+                    	<li><a href="#" class="facebook">Facebook</a></li>
+           				<li><a href="#" class="twitter">Twitter</a></li>
+            			<li><a href="#" class="dribble">Dribble</a></li>
+                        <li><a href="#" class="vimeo">Vimeo</a></li>
+                        <li><a href="#" class="youtube">YouTube</a></li>
+                        <li><a href="#" class="linkedin">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+<!--End Connect Section--> 
+
+</div>
+
+ <!-- The JavaScript -->  
+        <script type="text/javascript">
+    		$(function() {
+                $('#main-menu li a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+
+                    event.preventDefault();
+                });
+            });
+			
+ 			 $(document).ready(function(){
+    		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false});
+  			});
+
+        </script>
 </body>
 </html>
